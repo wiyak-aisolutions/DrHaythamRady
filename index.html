@@ -18,7 +18,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="مكتب المركز">
+<meta name="apple-mobile-web-app-title" content="د. هيثم راضي">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/logo-192.jpg">
 <title>د. هيثم راضي — نظام العيادة</title>
@@ -2174,7 +2174,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 
 <div class="install-banner" id="installBanner" hidden>
   <img src="assets/logo-192.jpg" alt="">
-  <div class="ib-text"><b data-i18n="installTitle">ثبّت تطبيق العيادة</b><small data-i18n="installSub">افتح اللوحة بلمسة من الشاشة الرئيسية</small></div>
+  <div class="ib-text"><b data-i18n="installTitle">ثبّت تطبيق العيادة</b><small data-i18n="installSub">افتح النظام بلمسة من الشاشة الرئيسية</small></div>
   <button class="btn primary" id="installBtn" data-i18n="installBtn">تثبيت</button>
   <button class="ib-close" id="installClose" aria-label="close"><svg><use href="#i-x"/></svg></button>
 </div>
@@ -2197,7 +2197,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
   <div class="login-card">
     <div class="login-logo"><img src="assets/logo-192.jpg" alt="د. هيثم راضي"></div>
     <div class="login-title" data-i18n="brandWord">د. هيثم راضي</div>
-    <div class="login-sub" data-i18n="loginSub">أهلًا بيك. سجّل دخولك عشان تكمّل</div>
+    <div class="login-sub" data-i18n="loginSub">أهلًا بك. سجّل دخولك للمتابعة</div>
     <div class="auth-tabs" role="tablist">
       <button type="button" class="auth-tab active" data-auth-tab="login" data-i18n="tabSignIn">تسجيل الدخول</button>
       <button type="button" class="auth-tab" data-auth-tab="signup" data-i18n="tabSignUp">إنشاء حساب</button>
@@ -2205,7 +2205,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
     <form id="loginForm" class="auth-form" autocomplete="on">
       <div class="auth-field"><label for="loginEmail" data-i18n="fieldEmail">البريد الإلكتروني</label><input id="loginEmail" name="email" type="email" autocomplete="email" dir="ltr" required></div>
       <div class="auth-field"><label for="loginPass" data-i18n="fieldPassword">كلمة المرور</label><input id="loginPass" name="password" type="password" autocomplete="current-password" required></div>
-      <div class="remember-line"><label class="remember-row"><input type="checkbox" id="rememberMe" checked> <span data-i18n="rememberMe">تذكرني على هذا الجهاز</span></label></div>
+      <div class="remember-line"><label class="remember-row"><input type="checkbox" id="rememberMe" checked> <span data-i18n="rememberMe">تذكّرني على هذا الجهاز</span></label></div>
       <div id="loginError" class="login-error" hidden></div>
       <button type="submit" class="btn primary auth-submit" id="loginSubmit"><svg><use href="#i-lock"/></svg><span data-i18n="signIn">تسجيل الدخول</span></button>
     </form>
@@ -2231,7 +2231,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 <div class="app" id="appRoot" hidden>
 <div class="m-fab" id="mFab" hidden>
   <div class="m-fab-menu" id="mFabMenu" hidden>
-    <button type="button" class="m-fab-item" id="mFabLead"><svg><use href="#i-funnel"/></svg><span data-i18n="btnAddLead">ليد جديد</span></button>
+    <button type="button" class="m-fab-item" id="mFabLead"><svg><use href="#i-funnel"/></svg><span data-i18n="btnAddLead">استفسار جديد</span></button>
     <button type="button" class="m-fab-item primary" id="mFabBook"><svg><use href="#i-calendar"/></svg><span data-i18n="btnAddBooking">إضافة حجز</span></button>
   </div>
   <button type="button" class="m-fab-btn" id="mFabBtn" aria-label="add"><svg><use href="#i-plus"/></svg></button>
@@ -2241,20 +2241,20 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
     <div class="logo-chip"><img src="assets/logo-192.jpg" alt=""></div>
     <div>
       <div class="brand-word" data-i18n="brandWord">د. هيثم راضي</div>
-      <div class="brand-tag" data-i18n="brandTag">مكتب المركز</div>
+      <div class="brand-tag" data-i18n="brandTag">الجهاز الهضمي والمناظير</div>
     </div>
   </div>
   <nav class="nav" id="nav">
     <button class="active" data-section="home"><svg><use href="#i-home"/></svg><span data-i18n="navHome">الرئيسية</span></button>
     <div class="nav-group-label" data-i18n="kickerOperations">العمليات</div>
     <button data-section="appointments"><svg><use href="#i-calendar"/></svg><span data-i18n="navAppointments">المواعيد</span><b class="nav-count" id="navApptCount" hidden></b></button>
-    <button data-section="leads"><svg><use href="#i-funnel"/></svg><span data-i18n="navLeads">الليدز</span><b class="nav-count" id="navLeadCount" hidden></b></button>
+    <button data-section="leads"><svg><use href="#i-funnel"/></svg><span data-i18n="navLeads">الاستفسارات</span><b class="nav-count" id="navLeadCount" hidden></b></button>
     <button data-section="doctors"><svg><use href="#i-tooth"/></svg><span data-i18n="navDoctors">الجدول</span></button>
     <button data-section="branches"><svg><use href="#i-building"/></svg><span data-i18n="navBranches">الفروع</span></button>
     <button data-section="patients"><svg><use href="#i-users"/></svg><span data-i18n="navPatients">المرضى</span></button>
     <div class="nav-group-label" data-i18n="kickerInsights">التحليلات</div>
     <button data-section="finance"><svg><use href="#i-wallet"/></svg><span data-i18n="navFinance">الحسابات</span></button>
-    <button data-section="stock"><svg><use href="#i-box"/></svg><span data-i18n="navStock">المخزون</span><span class="nav-dot warn" id="navStockDot" hidden></span></button>
+    <button data-section="stock"><svg><use href="#i-box"/></svg><span data-i18n="navStock">المستلزمات الطبية</span><span class="nav-dot warn" id="navStockDot" hidden></span></button>
     <button data-section="reports"><svg><use href="#i-chart"/></svg><span data-i18n="navReports">التقارير</span></button>
     <button data-section="activity"><svg><use href="#i-history"/></svg><span data-i18n="navActivity">سجل النشاط</span></button>
     <button data-section="opstatus"><svg><use href="#i-check"/></svg><span data-i18n="navStatus">حالة التشغيل</span><span class="nav-dot warn" id="navStatusDot"></span></button>
@@ -2275,7 +2275,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 </div>
 
 <header class="top">
-  <div class="title"><div class="greet" id="greet"></div><h1 id="pageTitle" data-i18n="titleHome">النهارده في العيادات</h1><p id="pageSub"></p></div>
+  <div class="title"><div class="greet" id="greet"></div><h1 id="pageTitle" data-i18n="titleHome">اليوم في العيادات</h1><p id="pageSub"></p></div>
   <div class="actions">
     <div class="lang-switch" role="group" aria-label="Language">
       <button class="lang-btn" data-lang="ar" id="langAr">AR</button>
@@ -2288,9 +2288,9 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
         <div class="enterprise-pop" id="notifPop" hidden></div>
       </div>
       <button class="btn ghost" id="exportBtn" type="button"><svg><use href="#i-download"/></svg><span class="enterprise-label" data-i18n="export">تصدير</span></button>
-      <button class="btn sync-btn" id="refresh"><span class="conn-dot warn"></span><svg id="refreshIco"><use href="#i-refresh"/></svg><span data-i18n="btnSync">مزامنة الآن</span></button>
+      <button class="btn sync-btn" id="refresh"><span class="conn-dot warn"></span><svg id="refreshIco"><use href="#i-refresh"/></svg><span data-i18n="btnSync">تحديث البيانات</span></button>
       <button class="btn primary" id="quick"><svg><use href="#i-plus"/></svg><span data-i18n="btnAddBooking">إضافة حجز</span></button>
-      <button class="btn" id="quickLead" type="button"><svg><use href="#i-funnel"/></svg><span data-i18n="btnAddLead">ليد جديد</span></button>
+      <button class="btn" id="quickLead" type="button"><svg><use href="#i-funnel"/></svg><span data-i18n="btnAddLead">استفسار جديد</span></button>
     </div>
   </div>
 </header>
@@ -2299,8 +2299,8 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
   <div class="search-box"><svg class="search-ico"><use href="#i-search"/></svg><input id="search" type="search" autocomplete="off" enterkeyhint="search" data-i18n-ph="searchPlaceholder" placeholder="ابحث باسم المريض، الهاتف، رقم الحجز..." /><kbd class="search-kbd" id="searchKbd" dir="ltr">⌘K</kbd><button type="button" class="search-clear" id="searchClear" hidden aria-label="clear"><svg><use href="#i-x"/></svg></button><div class="gsearch-pop" id="gsearchPop" hidden></div></div>
   <select id="branch"><option value="all" data-i18n="allBranches">كل الفروع</option></select>
   <select id="status"><option value="all" data-i18n="allStatuses">كل الحالات</option></select>
-  <button class="btn ghost" id="clearFilters" data-i18n="btnClearFilters">مسح الفلاتر</button>
-  <button class="btn ghost" id="advancedToggle" type="button"><svg><use href="#i-sliders"/></svg><span data-i18n="advancedFilters">فلاتر متقدمة</span></button>
+  <button class="btn ghost" id="clearFilters" data-i18n="btnClearFilters">مسح التصفية</button>
+  <button class="btn ghost" id="advancedToggle" type="button"><svg><use href="#i-sliders"/></svg><span data-i18n="advancedFilters">تصفية متقدمة</span></button>
   <div class="advanced-filters" id="advancedFilters">
     <div class="advanced-field"><label data-i18n="fromDate">من تاريخ</label><input id="dateFrom" type="date"></div>
     <div class="advanced-field"><label data-i18n="toDate">إلى تاريخ</label><input id="dateTo" type="date"></div>
@@ -2314,14 +2314,14 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
   <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiPending">بانتظار التأكيد</span><span class="kpi-ico amber"><svg><use href="#i-clock"/></svg></span></div><div class="num" id="kPending" data-val="0">—</div><div class="trend" id="kPendingTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
   <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiToday">حجوزات اليوم</span><span class="kpi-ico blue"><svg><use href="#i-calendar"/></svg></span></div><div class="num" id="kToday" data-val="0">—</div><div class="trend" id="kTodayTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
   <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiArrived">حضروا اليوم</span><span class="kpi-ico green"><svg><use href="#i-check"/></svg></span></div><div class="num" id="kArrived" data-val="0">—</div><div class="trend up" id="kArrivedTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
-  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiMissed">لم يحضروا / ملغي اليوم</span><span class="kpi-ico red"><svg><use href="#i-x"/></svg></span></div><div class="num" id="kMissed" data-val="0">—</div><div class="trend down" id="kMissedTrend" data-i18n="todayMetric">اليوم</div></div>
-  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiNewLeads">ليدز جديدة</span><span class="kpi-ico pink"><svg><use href="#i-funnel"/></svg></span></div><div class="num" id="kNewLeads" data-val="0">—</div><div class="trend" id="kNewLeadsTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
-  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiConv">معدل تحويل الليدز</span><span class="kpi-ico blue"><svg><use href="#i-trend"/></svg></span></div><div class="num" id="kConv" data-val="0">—</div><div class="trend" id="kConvTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
+  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiMissed">غياب وإلغاء اليوم</span><span class="kpi-ico red"><svg><use href="#i-x"/></svg></span></div><div class="num" id="kMissed" data-val="0">—</div><div class="trend down" id="kMissedTrend" data-i18n="todayMetric">اليوم</div></div>
+  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiNewLeads">استفسارات جديدة</span><span class="kpi-ico pink"><svg><use href="#i-funnel"/></svg></span></div><div class="num" id="kNewLeads" data-val="0">—</div><div class="trend" id="kNewLeadsTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
+  <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiConv">معدل تحويل الاستفسارات</span><span class="kpi-ico blue"><svg><use href="#i-trend"/></svg></span></div><div class="num" id="kConv" data-val="0">—</div><div class="trend" id="kConvTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
   <div class="card kpi"><div class="kpi-top"><span data-i18n="kpiAttend">معدل الحضور</span><span class="kpi-ico green"><svg><use href="#i-heart"/></svg></span></div><div class="num" id="kAttend" data-val="0">—</div><div class="trend" id="kAttendTrend" data-i18n="waitingData">بانتظار البيانات</div></div>
 </div>
 <div class="grid">
   <div class="card"><div class="card-head"><h2 data-i18n="weekBookingsTitle">الحجوزات خلال الأسبوع</h2><div class="week-total"><small data-i18n="windowTotalLabel">إجمالي 7 أيام</small><b id="weekTotal">—</b></div></div><div class="card-body"><div class="chart" id="chart"></div></div></div>
-  <div class="card"><div class="card-head"><h2 data-i18n="todayApptsTitle">مواعيد النهارده</h2><div class="card-head-tools"><span id="todayCount" class="badge b-blue"></span><button class="btn" data-go="appointments"><span data-i18n="viewAll">عرض الكل</span></button></div></div><div class="card-body tday" id="homeAppts"></div></div>
+  <div class="card"><div class="card-head"><h2 data-i18n="todayApptsTitle">مواعيد اليوم</h2><div class="card-head-tools"><span id="todayCount" class="badge b-blue"></span><button class="btn" data-go="appointments"><span data-i18n="viewAll">عرض الكل</span></button></div></div><div class="card-body tday" id="homeAppts"></div></div>
 </div>
 <div class="grid one">
   <div class="card"><div class="card-head"><h2 data-i18n="navBranches">الفروع</h2><button class="btn" data-go="branches"><span data-i18n="details">التفاصيل</span></button></div><div class="card-body" id="branchSummary"></div></div>
@@ -2330,22 +2330,22 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 
 <section id="users" class="section" hidden>
   <div class="card"><div class="card-head"><h2 data-i18n="usersTitle">المستخدمين والصلاحيات</h2><span class="badge b-blue" id="usersCount">0</span></div>
-  <div class="card-body"><p class="users-hint" data-i18n="usersHint">أي حد بيعمل حساب من شاشة الدخول بيظهر هنا «مستني الموافقة». اضغط «تعديل» عشان تفعّله وتحدد صلاحياته وفرعه.</p><div id="usersList" class="users-list"></div></div></div>
+  <div class="card-body"><p class="users-hint" data-i18n="usersHint">أي حساب جديد بيظهر هنا بحالة «في انتظار الموافقة». اضغط «تعديل» عشان تفعّله وتحدد صلاحياته وفرعه.</p><div id="usersList" class="users-list"></div></div></div>
 </section>
 
 <section id="opstatus" class="section" hidden>
   <div class="card integ-card"><div class="card-head"><h2 data-i18n="opStatusTitle">حالة التشغيل</h2><span class="live-pill warn" id="livePill"><i></i><span id="livePillText">…</span></span></div><div class="card-body">
     <div class="integ-grid">
-      <div class="integ"><div class="integ-ico wa"><svg><use href="#b-chat"/></svg></div><div class="integ-meta"><b>WhatsApp</b><small data-i18n="integWaSub">بوت الحجز التلقائي</small></div><span class="integ-state warn" id="waState"><i></i><span data-i18n="notLinked">لم يُربط بعد</span></span></div>
-      <div class="integ"><div class="integ-ico tg"><svg><use href="#b-plane"/></svg></div><div class="integ-meta"><b data-i18n="leadFormTitle">استقبال الليدز</b><small data-i18n="integLeadSub">فورم الموقع وإعلانات Meta</small></div><span class="integ-state warn" id="leadState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
-      <div class="integ"><div class="integ-ico n8"><svg><use href="#b-flow"/></svg></div><div class="integ-meta"><b>n8n</b><small data-i18n="integN8nSub">الأتمتة وواجهة الحجز</small></div><span class="integ-state warn" id="n8nState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
-      <div class="integ"><div class="integ-ico gs"><svg><use href="#b-grid"/></svg></div><div class="integ-meta"><b>Google Sheets</b><small data-i18n="integGsSub">الحجوزات والليدز والجداول</small></div><span class="integ-state warn" id="gsState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
+      <div class="integ"><div class="integ-ico wa"><svg><use href="#b-chat"/></svg></div><div class="integ-meta"><b>WhatsApp</b><small data-i18n="integWaSub">مساعد الحجز على واتساب</small></div><span class="integ-state warn" id="waState"><i></i><span data-i18n="notLinked">غير مربوط</span></span></div>
+      <div class="integ"><div class="integ-ico tg"><svg><use href="#b-plane"/></svg></div><div class="integ-meta"><b data-i18n="leadFormTitle">استقبال الاستفسارات</b><small data-i18n="integLeadSub">نموذج الموقع وإعلانات Meta</small></div><span class="integ-state warn" id="leadState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
+      <div class="integ"><div class="integ-ico n8"><svg><use href="#b-flow"/></svg></div><div class="integ-meta"><b data-i18n="integN8nTitle">محرّك التشغيل</b><small data-i18n="integN8nSub">التشغيل التلقائي وواجهة الحجز</small></div><span class="integ-state warn" id="n8nState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
+      <div class="integ"><div class="integ-ico gs"><svg><use href="#b-grid"/></svg></div><div class="integ-meta"><b data-i18n="integGsTitle">قاعدة البيانات</b><small data-i18n="integGsSub">الحجوزات والاستفسارات والجداول</small></div><span class="integ-state warn" id="gsState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
       <div class="integ"><div class="integ-ico n8"><svg><use href="#b-flow"/></svg></div><div class="integ-meta"><b data-i18n="integAiTitle">المساعد الذكي</b><small data-i18n="integAiSub">فهم رسائل واتساب بالذكاء الاصطناعي</small></div><span class="integ-state warn" id="aiState"><i></i><span data-i18n="connecting">جاري الاتصال</span></span></div>
     </div>
-    <div class="integ-foot"><svg><use href="#i-clock"/></svg><span data-i18n="lastSyncLabel">آخر مزامنة</span><b id="syncTime">—</b></div>
+    <div class="integ-foot"><svg><use href="#i-clock"/></svg><span data-i18n="lastSyncLabel">آخر تحديث</span><b id="syncTime">—</b></div>
   </div></div>
   <div class="card links-card" style="margin-top:16px"><div class="card-head"><h2 data-i18n="linksTitle">روابط العيادة</h2></div><div class="card-body">
-    <p class="users-hint" data-i18n="linksHint">نفس الروابط اللي البوت بيبعتها للعميل لما يسأل عن صفحاتنا.</p>
+    <p class="users-hint" data-i18n="linksHint">نفس الروابط اللي المساعد بيبعتها للمريض لما يسأل عن صفحاتنا.</p>
     <div class="links-grid">
       <a class="link-tile" href="https://drhaythamrady.com" target="_blank" rel="noopener"><b data-i18n="linkWeb">الموقع</b><small dir="ltr">drhaythamrady.com</small></a>
       <a class="link-tile" href="https://www.instagram.com/dr_haytham_rady/" target="_blank" rel="noopener"><b>Instagram</b><small dir="ltr">@dr_haytham_rady</small></a>
@@ -2359,14 +2359,14 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 <div class="qf" id="qfAppt"></div>
 <div class="card"><div class="card-head"><h2 data-i18n="apptsManageTitle">إدارة المواعيد</h2><div class="card-head-tools"><div class="seg" role="tablist"><button type="button" id="viewList" class="on" data-i18n="viewList">قائمة</button><button type="button" id="viewAgenda" data-i18n="viewAgenda">جدول اليوم</button></div><span id="apptCount" class="badge b-blue"></span></div></div>
 <div id="listBox"><div class="table-wrap"><table class="table"><thead><tr><th>#</th><th data-i18n="colTime">الموعد</th><th data-i18n="colPatient">المريض</th><th data-i18n="colService">الخدمة</th><th data-i18n="colDoctor">الدكتور</th><th data-i18n="colBranch">الفرع</th><th data-i18n="colSource">المصدر</th><th data-i18n="colStatus">الحالة</th><th data-i18n="colAction">إجراء</th></tr></thead><tbody id="apptTable"></tbody></table></div><div class="orders-pagination"><span class="pagination-info" id="apptPageInfo"></span><div class="pagination-actions"><button class="btn" id="apptPrev" type="button" data-i18n="previous">السابق</button><button class="btn" id="apptNext" type="button" data-i18n="next">التالي</button></div></div></div>
-<div id="agendaBox" hidden><div class="card-body" style="padding-bottom:10px"><div class="ag-nav"><button class="btn" id="agPrev" type="button">›</button><input id="agDate" type="date"><button class="btn" id="agNext" type="button">‹</button><button class="btn" id="agToday" type="button" data-i18n="todayShort">النهارده</button></div></div><div class="agenda-wrap" id="agenda"></div></div>
+<div id="agendaBox" hidden><div class="card-body" style="padding-bottom:10px"><div class="ag-nav"><button class="btn" id="agPrev" type="button">›</button><input id="agDate" type="date"><button class="btn" id="agNext" type="button">‹</button><button class="btn" id="agToday" type="button" data-i18n="todayShort">اليوم</button></div></div><div class="agenda-wrap" id="agenda"></div></div>
 </div>
 </section>
 
 <section id="leads" class="section" hidden>
 <div class="pipe" id="pipe"></div>
 <div class="qf" id="qfLead"></div>
-<div class="card"><div class="card-head"><h2 data-i18n="leadsManageTitle">متابعة الليدز</h2><span id="leadCount" class="badge b-blue"></span></div><div class="table-wrap"><table class="table"><thead><tr><th>#</th><th data-i18n="colLead">الاسم</th><th data-i18n="colSourceCampaign">المصدر / الحملة</th><th data-i18n="colService">الخدمة</th><th data-i18n="colStatus">الحالة</th><th data-i18n="colBooking">الحجز</th><th data-i18n="colAgent">الموظف</th><th data-i18n="colEntry">دخل من</th><th data-i18n="colAction">إجراء</th></tr></thead><tbody id="leadTable"></tbody></table></div></div>
+<div class="card"><div class="card-head"><h2 data-i18n="leadsManageTitle">متابعة الاستفسارات</h2><span id="leadCount" class="badge b-blue"></span></div><div class="table-wrap"><table class="table"><thead><tr><th>#</th><th data-i18n="colLead">الاسم</th><th data-i18n="colSourceCampaign">المصدر / الحملة</th><th data-i18n="colService">الخدمة</th><th data-i18n="colStatus">الحالة</th><th data-i18n="colBooking">الحجز</th><th data-i18n="colAgent">المسؤول</th><th data-i18n="colEntry">وقت التسجيل</th><th data-i18n="colAction">إجراء</th></tr></thead><tbody id="leadTable"></tbody></table></div></div>
 </section>
 
 <section id="doctors" class="section" hidden>
@@ -2374,17 +2374,17 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 </section>
 
 <section id="branches" class="section" hidden>
-<div class="card"><div class="card-head"><h2 data-i18n="branchPerformanceTitle">أداء الفروع</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="navBranches">الفرع</th><th data-i18n="colToday">حجوزات اليوم</th><th data-i18n="colPendingShort">بانتظار</th><th data-i18n="colArrivedShort">حضروا</th><th data-i18n="colNoShow">لم يحضروا</th><th data-i18n="colAttendRate">نسبة الحضور</th><th data-i18n="colUpcoming">القادم</th></tr></thead><tbody id="branchesTable"></tbody></table></div></div>
+<div class="card"><div class="card-head"><h2 data-i18n="branchPerformanceTitle">أداء الفروع</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="navBranches">الفروع</th><th data-i18n="colToday">حجوزات اليوم</th><th data-i18n="colPendingShort">بانتظار</th><th data-i18n="colArrivedShort">حضروا</th><th data-i18n="colNoShow">لم يحضروا</th><th data-i18n="colAttendRate">نسبة الحضور</th><th data-i18n="colUpcoming">القادم</th></tr></thead><tbody id="branchesTable"></tbody></table></div></div>
 <div class="bottom-grid" id="branchCards" style="margin-top:16px"></div>
 </section>
 
 <section id="patients" class="section" hidden>
-<div class="card"><div class="card-head"><h2 data-i18n="navPatients">المرضى</h2><span id="patientCount" class="badge b-blue"></span></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colPatient">المريض</th><th data-i18n="colPhone">الهاتف</th><th data-i18n="colVisits">الزيارات</th><th data-i18n="colBookings">الحجوزات</th><th data-i18n="colNoShow">لم يحضروا</th><th data-i18n="colLastVisit">آخر زيارة</th><th data-i18n="colNextAppt">الموعد القادم</th></tr></thead><tbody id="patientsTable"></tbody></table></div></div>
+<div class="card"><div class="card-head"><h2 data-i18n="navPatients">المرضى</h2><span id="patientCount" class="badge b-blue"></span></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colPatient">المريض</th><th data-i18n="colPhone">الموبايل</th><th data-i18n="colVisits">الزيارات</th><th data-i18n="colBookings">الحجوزات</th><th data-i18n="colNoShow">لم يحضروا</th><th data-i18n="colLastVisit">آخر زيارة</th><th data-i18n="colNextAppt">الموعد القادم</th></tr></thead><tbody id="patientsTable"></tbody></table></div></div>
 </section>
 
 <section id="finance" class="section" hidden>
 <div class="card" style="margin-bottom:16px"><div class="card-head"><h2 data-i18n="finTitle">ملخص الحسابات</h2><div class="seg" role="tablist"><button type="button" data-fin="today" data-i18n="finToday">اليوم</button><button type="button" data-fin="week" class="on" data-i18n="finWeek">الأسبوع</button><button type="button" data-fin="month" data-i18n="finMonth">الشهر</button><button type="button" data-fin="all" data-i18n="finAll">الكل</button></div></div><div class="card-body"><div class="fin-kpis" id="finKpis"></div><div class="fin-note" id="finRange"></div></div></div>
-<div class="card" style="margin-bottom:16px"><div class="card-head"><h2 data-i18n="finBranchTitle">الدخل والإشغال لكل فرع</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="navBranches">الفرع</th><th data-i18n="colBookings">الحجوزات</th><th data-i18n="colArrivedShort">حضروا</th><th data-i18n="colCollected">المحصّل</th><th data-i18n="colNet">الصافي</th><th data-i18n="colExpected">المتوقع</th><th data-i18n="colOccupancy">الإشغال</th></tr></thead><tbody id="finBranches"></tbody></table></div></div>
+<div class="card" style="margin-bottom:16px"><div class="card-head"><h2 data-i18n="finBranchTitle">الدخل والإشغال لكل فرع</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="navBranches">الفروع</th><th data-i18n="colBookings">الحجوزات</th><th data-i18n="colArrivedShort">حضروا</th><th data-i18n="colCollected">المحصّل</th><th data-i18n="colNet">الصافي</th><th data-i18n="colExpected">المتوقع</th><th data-i18n="colOccupancy">الإشغال</th></tr></thead><tbody id="finBranches"></tbody></table></div></div>
 <div class="bottom-grid"><div class="card"><div class="card-head"><h2 data-i18n="revByService">الدخل حسب الخدمة</h2></div><div class="card-body" id="finServices"></div></div><div class="card"><div class="card-head"><h2 data-i18n="revByDoctor">الدخل حسب الدكتور</h2></div><div class="card-body" id="finDoctors"></div></div><div class="card"><div class="card-head"><h2 data-i18n="finByPayment">الدخل حسب طريقة الدفع</h2></div><div class="card-body" id="finPay"></div></div></div>
 </section>
 
@@ -2397,17 +2397,17 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 
 <section id="reports" class="section" hidden>
 <div class="bottom-grid">
-  <div class="card"><div class="card-head"><h2 data-i18n="funnelTitle">رحلة الليد</h2></div><div class="card-body" id="repFunnel"></div></div>
+  <div class="card"><div class="card-head"><h2 data-i18n="funnelTitle">رحلة الاستفسار</h2></div><div class="card-body" id="repFunnel"></div></div>
   <div class="card"><div class="card-head"><h2 data-i18n="byServiceTitle">الحجوزات حسب الخدمة</h2></div><div class="card-body" id="repServices"></div></div>
   <div class="card"><div class="card-head"><h2 data-i18n="byChannelTitle">الحجوزات حسب القناة</h2></div><div class="card-body" id="repChannels"></div></div>
 </div>
 <div class="grid one" style="margin-top:16px">
-  <div class="card"><div class="card-head"><h2 data-i18n="leadSourcesTitle">أداء مصادر الليدز</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colSource">المصدر</th><th data-i18n="colLeads">ليدز</th><th data-i18n="colBooked">حجزوا</th><th data-i18n="colLost">ضايعة</th><th data-i18n="colConvRate">التحويل</th></tr></thead><tbody id="repSources"></tbody></table></div></div>
-  <div class="card"><div class="card-head"><h2 data-i18n="campaignsTitle">أداء الحملات</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colCampaign">الحملة</th><th data-i18n="colLeads">ليدز</th><th data-i18n="colBooked">حجزوا</th><th data-i18n="colConvRate">التحويل</th></tr></thead><tbody id="repCampaigns"></tbody></table></div></div>
+  <div class="card"><div class="card-head"><h2 data-i18n="leadSourcesTitle">أداء مصادر الاستفسارات</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colSource">المصدر</th><th data-i18n="colLeads">استفسارات</th><th data-i18n="colBooked">حجزوا</th><th data-i18n="colLost">بدون حجز</th><th data-i18n="colConvRate">التحويل</th></tr></thead><tbody id="repSources"></tbody></table></div></div>
+  <div class="card"><div class="card-head"><h2 data-i18n="campaignsTitle">أداء الحملات</h2></div><div class="table-wrap"><table class="table"><thead><tr><th data-i18n="colCampaign">الحملة</th><th data-i18n="colLeads">استفسارات</th><th data-i18n="colBooked">حجزوا</th><th data-i18n="colConvRate">التحويل</th></tr></thead><tbody id="repCampaigns"></tbody></table></div></div>
 </div>
 <div class="grid" style="margin-top:16px">
   <div class="card"><div class="card-head"><h2 data-i18n="perfSummaryTitle">ملخص الأداء</h2></div><div class="card-body"><div class="status-list" id="repSummary"></div></div></div>
-  <div class="card"><div class="card-head"><h2 data-i18n="lostReasonsTitle">أسباب ضياع الليدز</h2></div><div class="card-body" id="repLost"></div></div>
+  <div class="card"><div class="card-head"><h2 data-i18n="lostReasonsTitle">أسباب عدم الحجز</h2></div><div class="card-body" id="repLost"></div></div>
 </div>
 </section>
 
@@ -2421,7 +2421,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
       <div class="card-head"><h2 data-i18n="sessionTitle">الجلسة</h2><span class="role-chip" id="roleChip">—</span></div>
       <div class="card-body">
         <div class="status-list">
-          <div class="status-row"><span class="who" data-i18n="sessionState">حالة الجلسة</span><span class="badge b-green" id="sessionState">نشطة</span></div>
+          <div class="status-row"><span class="who" data-i18n="sessionState">حالة الجلسة</span><span class="badge b-green" id="sessionState" data-i18n="active">نشطة</span></div>
         </div>
       </div>
     </div>
@@ -2431,7 +2431,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
 <nav class="m-bottomnav" id="mBottomNav">
   <button data-section="home" class="active"><svg><use href="#i-home"/></svg><span data-i18n="navHome">الرئيسية</span></button>
   <button data-section="appointments"><svg><use href="#i-calendar"/></svg><span data-i18n="navAppointments">المواعيد</span></button>
-  <button data-section="leads"><svg><use href="#i-funnel"/></svg><span data-i18n="navLeads">الليدز</span></button>
+  <button data-section="leads"><svg><use href="#i-funnel"/></svg><span data-i18n="navLeads">الاستفسارات</span></button>
   <button data-section="doctors"><svg><use href="#i-tooth"/></svg><span data-i18n="navDoctors">الجدول</span></button>
   <button id="mMoreBtn" type="button"><svg><use href="#i-menu"/></svg><span data-i18n="navMore">المزيد</span></button>
 </nav>
@@ -2475,145 +2475,145 @@ let booted = false;
 /* ========================= I18N ========================= */
 let LANG = localStorage.getItem('drh-lang') || 'ar';
 const I18N = {
- ar:{
+ ar:{ integN8nTitle:"محرّك التشغيل", integGsTitle:"قاعدة البيانات",
   brandWord:"د. هيثم راضي", brandTag:"الجهاز الهضمي والمناظير",
   linksTitle:"روابط العيادة", linksHint:"نفس الروابط اللي المساعد بيبعتها للمريض لما يسأل عن صفحاتنا.", linkWeb:"الموقع",
-  navUsers:"المستخدمين", titleUsers:"المستخدمين", subUsers:"مين يدخل اللوحة وبيشوف إيه", usersTitle:"المستخدمين والصلاحيات", usersHint:"أي حد بيعمل حساب من شاشة الدخول بيظهر هنا «مستني الموافقة». اضغط «تعديل» عشان تفعّله وتحدد صلاحياته وفرعه.", uPending:"مستني الموافقة", uApproved:"مفعّل", uDisabled:"موقوف", uAdmin:"مدير (كل الصلاحيات)", uStaff:"موظف", uAllBranches:"كل الفروع", uEdit:"تعديل", uSave:"حفظ", uSaved:"اتحفظ", uSelfLock:"ماينفعش توقف حسابك أو تشيل منه صلاحية المدير", uNoUsers:"مفيش مستخدمين لسه", uStatusLbl:"الحالة", uRoleLbl:"النوع", uBranchLbl:"الفرع", uPermsLbl:"الصلاحيات", uNoPerms:"بدون صلاحيات", uLastLogin:"آخر دخول", uNever:"لسه", uYou:"انت", uAdminNote:"المدير بيشوف كل حاجة في كل الفروع، وبيدير المستخدمين.", uBranchNote:"لو سبت الفرع «كل الفروع» الموظف هيشوف كل الفروع.", permAttendance:"تأكيد الحضور والدفع", uSaveErr:"ما اتحفظش، جرّب تاني",
-  navHome:"الرئيسية", navAppointments:"المواعيد", navLeads:"الاستفسارات", navDoctors:"الجدول", navBranches:"الفروع", navPatients:"المرضى", navReports:"التقارير", navActivity:"سجل النشاط", navStatus:"حالة التشغيل", integAiTitle:"المساعد الذكي", integAiSub:"فهم رسائل واتساب بالذكاء الاصطناعي", titleOpstatus:"حالة التشغيل", subOpstatus:"اتصال الأنظمة اللي بتشغّل العيادة", navMore:"المزيد",
+  navUsers:"المستخدمين", titleUsers:"المستخدمين", subUsers:"مين يدخل النظام وصلاحيات كل مستخدم", usersTitle:"المستخدمين والصلاحيات", usersHint:"أي حساب جديد بيظهر هنا بحالة «في انتظار الموافقة». اضغط «تعديل» عشان تفعّله وتحدد صلاحياته وفرعه.", uPending:"في انتظار الموافقة", uApproved:"مفعّل", uDisabled:"موقوف", uAdmin:"مدير (كل الصلاحيات)", uStaff:"موظف", uAllBranches:"كل الفروع", uEdit:"تعديل", uSave:"حفظ", uSaved:"تم الحفظ", uSelfLock:"لا يمكن إيقاف حسابك أو إلغاء صلاحية المدير منه", uNoUsers:"مفيش مستخدمين لسه", uStatusLbl:"الحالة", uRoleLbl:"الدور", uBranchLbl:"الفرع", uPermsLbl:"الصلاحيات", uNoPerms:"بدون صلاحيات", uLastLogin:"آخر دخول", uNever:"لم يدخل بعد", uYou:"أنت", uAdminNote:"المدير بيشوف كل حاجة في كل الفروع، وبيدير المستخدمين.", uBranchNote:"لو سبت الفرع «كل الفروع» الموظف هيشوف كل الفروع.", permAttendance:"تأكيد الحضور والدفع", uSaveErr:"تعذّر الحفظ، حاول تاني",
+  navHome:"الرئيسية", navAppointments:"المواعيد", navLeads:"الاستفسارات", navDoctors:"الجدول", navBranches:"الفروع", navPatients:"المرضى", navReports:"التقارير", navActivity:"سجل النشاط", navStatus:"حالة التشغيل", integAiTitle:"المساعد الذكي", integAiSub:"فهم رسائل واتساب بالذكاء الاصطناعي", titleOpstatus:"حالة التشغيل", subOpstatus:"الخدمات المرتبطة بالنظام وحالة اتصالها", navMore:"المزيد",
   kickerOperations:"العمليات", kickerInsights:"التحليلات", notifications:"التنبيهات", export:"تصدير",
-  btnSync:"تحديث البيانات", btnAddBooking:"إضافة حجز", searchPlaceholder:"ابحث باسم المريض، الهاتف، رقم الحجز...",
+  btnSync:"تحديث البيانات", btnAddBooking:"إضافة حجز", searchPlaceholder:"ابحث باسم المريض أو الموبايل أو رقم الحجز...",
   allBranches:"كل الفروع", allStatuses:"كل الحالات", allDoctors:"كل الدكاترة", allSources:"كل المصادر", btnClearFilters:"مسح التصفية", advancedFilters:"تصفية متقدمة", fromDate:"من تاريخ", toDate:"إلى تاريخ",
-  titleHome:"النهارده في العيادات", subHome:"",
+  titleHome:"اليوم في العيادات", subHome:"",
   titleAppointments:"المواعيد", subAppointments:"إدارة ومتابعة كل الحجوزات",
   titleLeads:"الاستفسارات", subLeads:"متابعة اللي سألوا ولسه ما حجزوش",
-  titleDoctors:"الجدول", subDoctors:"مواعيد الدكتور في كل فرع وحجوزات النهارده",
+  titleDoctors:"الجدول", subDoctors:"مواعيد الدكتور في كل فرع وحجوزات اليوم",
   titleBranches:"الفروع", subBranches:"مقارنة أداء الفروع",
   titlePatients:"المرضى", subPatients:"سجل المرضى وزياراتهم",
   titleReports:"التقارير", subReports:"نسب الحجز والمصادر والخدمات",
-  titleActivity:"سجل النشاط", subActivity:"كل التعديلات اللي اتعملت من اللوحة",
-  kpiToday:"حجوزات اليوم", kpiPending:"بانتظار التأكيد", kpiArrived:"حضروا اليوم", kpiMissed:"ما حضروش / اتلغى النهارده", kpiNewLeads:"استفسارات جديدة", kpiConv:"معدل تحويل الاستفسارات", kpiAttend:"معدل الحضور",
-  waitingData:"بانتظار البيانات", todayMetric:"اليوم", ofWhich:"منهم", outOf:"من أصل", arrivedWord:"حضروا", needsFollowUp:"محتاجة متابعة", noneWaiting:"مفيش حاجة معلقة", leadsTotal:"من إجمالي", leadsWord:"استفسار", pastVisits:"من الزيارات السابقة", waitingContact:"مستنية أول تواصل", oldNew:"قديمة أكتر من ساعتين",
-  weekBookingsTitle:"الحجوزات خلال الأسبوع", windowTotalLabel:"إجمالي 7 أيام", bookingsUnit:"حجز", todayShort:"النهارده", avgShort:"متوسط يومي",
-  opStatusTitle:"حالة التشغيل", connected:"متصل", connecting:"جاري الاتصال", working:"شغال", offlineShort:"غير متصل", notLinked:"لسه ماتربطش", ready:"جاهز لاستقبال الاستفسارات",
+  titleActivity:"سجل النشاط", subActivity:"كل تعديل تم من النظام",
+  kpiToday:"حجوزات اليوم", kpiPending:"بانتظار التأكيد", kpiArrived:"حضروا اليوم", kpiMissed:"غياب وإلغاء اليوم", kpiNewLeads:"استفسارات جديدة", kpiConv:"معدل تحويل الاستفسارات", kpiAttend:"معدل الحضور",
+  waitingData:"بانتظار البيانات", todayMetric:"اليوم", ofWhich:"منهم", outOf:"من أصل", arrivedWord:"حضروا", needsFollowUp:"محتاجة متابعة", noneWaiting:"مفيش حاجة معلقة", leadsTotal:"من إجمالي", leadsWord:"استفسار", pastVisits:"من الزيارات السابقة", waitingContact:"مستنية أول تواصل", oldNew:"مرّ عليها أكتر من ساعتين",
+  weekBookingsTitle:"الحجوزات خلال الأسبوع", windowTotalLabel:"إجمالي 7 أيام", bookingsUnit:"حجز", todayShort:"اليوم", avgShort:"متوسط يومي",
+  opStatusTitle:"حالة التشغيل", connected:"متصل", connecting:"جاري الاتصال", working:"شغال", offlineShort:"غير متصل", notLinked:"غير مربوط", ready:"جاهز لاستقبال الاستفسارات",
   integWaSub:"مساعد الحجز على واتساب", leadFormTitle:"استقبال الاستفسارات", integLeadSub:"نموذج الموقع وإعلانات Meta", integN8nSub:"التشغيل التلقائي وواجهة الحجز", integGsSub:"الحجوزات والاستفسارات والجداول", lastSyncLabel:"آخر تحديث",
   liveConnecting:"جاري الاتصال…", liveOnline:"متصل — البيانات محدّثة", liveOffline:"تعذّر الاتصال — حاول تاني بعد لحظات",
-  todayApptsTitle:"مواعيد النهارده", viewAll:"عرض الكل", details:"التفاصيل", noApptsToday:"مفيش مواعيد النهارده",
+  todayApptsTitle:"مواعيد اليوم", viewAll:"عرض الكل", details:"التفاصيل", noApptsToday:"مفيش مواعيد اليوم",
   apptsManageTitle:"إدارة المواعيد", leadsManageTitle:"متابعة الاستفسارات", noMatching:"مفيش نتائج مطابقة",
   colTime:"الموعد", colPatient:"المريض", colService:"الخدمة", colDoctor:"الدكتور", colBranch:"الفرع", colSource:"المصدر", colStatus:"الحالة", colAction:"إجراء",
-  colLead:"الاسم", colSourceCampaign:"المصدر / الحملة", colAgent:"الموظف", colEntry:"دخل من",
+  colLead:"الاسم", colSourceCampaign:"المصدر / الحملة", colAgent:"المسؤول", colEntry:"وقت التسجيل",
   colToday:"حجوزات اليوم", colPendingShort:"بانتظار", colArrivedShort:"حضروا", colNoShow:"لم يحضروا", colAttendRate:"نسبة الحضور", colUpcoming:"القادم",
-  colPhone:"الهاتف", colVisits:"الزيارات", colBookings:"الحجوزات", colLastVisit:"آخر زيارة", colNextAppt:"الموعد القادم",
-  colLeads:"استفسارات", colBooked:"حجزوا", colLost:"ضايعة", colConvRate:"التحويل", colCampaign:"الحملة",
+  colPhone:"الموبايل", colVisits:"الزيارات", colBookings:"الحجوزات", colLastVisit:"آخر زيارة", colNextAppt:"الموعد القادم",
+  colLeads:"استفسارات", colBooked:"حجزوا", colLost:"بدون حجز", colConvRate:"التحويل", colCampaign:"الحملة",
   branchPerformanceTitle:"أداء الفروع", previous:"السابق", next:"التالي", cancel:"إلغاء", confirm:"تأكيد",
-  funnelTitle:"رحلة الاستفسار", byServiceTitle:"الحجوزات حسب الخدمة", byChannelTitle:"الحجوزات حسب القناة", leadSourcesTitle:"أداء مصادر الاستفسارات", campaignsTitle:"أداء الحملات", perfSummaryTitle:"ملخص الأداء", lostReasonsTitle:"أسباب ضياع الاستفسارات",
-  funLeads:"استفسارات دخلت", funContacted:"اتواصل معاها", funBooked:"حجزت", funAttended:"حضرت",
-  repTotalBookings:"إجمالي الحجوزات", repCancelRate:"نسبة الإلغاء", repNoShowRate:"نسبة عدم الحضور", repAvgDaily:"متوسط الحجوزات اليومي", repLostLeads:"استفسارات ضايعة", repAvgResp:"استفسارات جديدة بدون تواصل",
+  funnelTitle:"رحلة الاستفسار", byServiceTitle:"الحجوزات حسب الخدمة", byChannelTitle:"الحجوزات حسب القناة", leadSourcesTitle:"أداء مصادر الاستفسارات", campaignsTitle:"أداء الحملات", perfSummaryTitle:"ملخص الأداء", lostReasonsTitle:"أسباب عدم الحجز",
+  funLeads:"استفسارات واردة", funContacted:"تم التواصل", funBooked:"تم الحجز", funAttended:"تم الحضور",
+  repTotalBookings:"إجمالي الحجوزات", repCancelRate:"نسبة الإلغاء", repNoShowRate:"نسبة عدم الحضور", repAvgDaily:"متوسط الحجوزات اليومي", repLostLeads:"استفسارات بدون حجز", repAvgResp:"استفسارات جديدة بدون تواصل",
   noData:"مفيش بيانات", noReason:"مفيش سبب مسجل",
-  activityTitle:"سجل النشاط", sessionTitle:"الجلسة", sessionState:"حالة الجلسة", active:"نشطة", noActivity:"لسه مفيش نشاط مسجل", by:"بواسطة",
-  statusPending:"بانتظار الرد", statusConfirmed:"مؤكد", statusArrived:"حضر", statusNoShow:"لم يحضر", statusCancelled:"ملغي",
-  lsNew:"جديد", lsContacted:"تم الاتصال", lsBooked:"تم الحجز", lsLost:"ضايع",
-  changeStatus:"تغيير الحالة", changeStatusTitle:"تغيير الحالة", currentStatus:"الحالة الحالية", notAvailable:"مش متاح دلوقتي", onlyAfterDate:"متاح من يوم الموعد",
-  confirmChange:"تأكيد التغيير", confirmChangeText:"تغيير حالة {what} إلى «{to}»؟", lossReason:"سبب الضياع", chooseReason:"اختار السبب",
-  bookingN:"حجز", leadN:"استفسار", patientLbl:"المريض", phoneLbl:"الهاتف", serviceLbl:"الخدمة", branchLbl:"الفرع", doctorLbl:"الدكتور", dateLbl:"التاريخ", timeLbl:"الساعة", sourceLbl:"المصدر", statusLbl:"الحالة", createdLbl:"اتسجل", campaignLbl:"الحملة", agentLbl:"الموظف", entryLbl:"وقت الدخول", updatedLbl:"آخر تحديث", lossLbl:"سبب الضياع", linkedBooking:"الحجز المرتبط",
-  bookNow:"احجز له", saveAgent:"حفظ الموظف", agentPlaceholder:"اسم الموظف المسؤول", call:"اتصال", whatsapp:"واتساب",
-  newBookingTitle:"حجز جديد", fieldPatient:"اسم المريض", fieldPhone:"رقم الموبايل", fieldService:"الخدمة", fieldBranch:"الفرع", fieldDate:"التاريخ", fieldDoctor:"الدكتور", anyDoctor:"أي دكتور متاح", fieldSlot:"المواعيد المتاحة", fieldSource:"مصدر الحجز", chooseService:"اختار الخدمة", chooseBranch:"اختار الفرع", saveBooking:"تأكيد الحجز", pickSlotHint:"اختار الخدمة والفرع، وهتظهرلك الأيام والمواعيد المتاحة", noSlots:"مفيش مواعيد متاحة في اليوم ده — جرّب يوم تاني", fillAll:"كمّل كل البيانات واختار ميعاد",
+  activityTitle:"سجل النشاط", sessionTitle:"الجلسة", sessionState:"حالة الجلسة", active:"نشطة", noActivity:"مفيش نشاط مسجّل لسه", by:"بواسطة",
+  statusPending:"بانتظار التأكيد", statusConfirmed:"مؤكد", statusArrived:"حضر", statusNoShow:"لم يحضر", statusCancelled:"ملغي",
+  lsNew:"جديد", lsContacted:"تم التواصل", lsBooked:"تم الحجز", lsLost:"بدون حجز",
+  changeStatus:"تغيير الحالة", changeStatusTitle:"تغيير الحالة", currentStatus:"الحالة الحالية", notAvailable:"غير متاح الآن", onlyAfterDate:"متاح من يوم الموعد",
+  confirmChange:"تأكيد التغيير", confirmChangeText:"تغيير حالة {what} إلى «{to}»؟", lossReason:"سبب عدم الحجز", chooseReason:"اختار السبب",
+  bookingN:"حجز", leadN:"استفسار", patientLbl:"المريض", phoneLbl:"الموبايل", serviceLbl:"الخدمة", branchLbl:"الفرع", doctorLbl:"الدكتور", dateLbl:"التاريخ", timeLbl:"الساعة", sourceLbl:"المصدر", statusLbl:"الحالة", createdLbl:"تاريخ التسجيل", campaignLbl:"الحملة", agentLbl:"المسؤول", entryLbl:"وقت التسجيل", updatedLbl:"آخر تحديث", lossLbl:"سبب عدم الحجز", linkedBooking:"الحجز المرتبط",
+  bookNow:"حجز موعد", saveAgent:"حفظ", agentPlaceholder:"اسم المسؤول عن المتابعة", call:"اتصال", whatsapp:"واتساب",
+  newBookingTitle:"حجز جديد", fieldPatient:"اسم المريض", fieldPhone:"رقم الموبايل", fieldService:"الخدمة", fieldBranch:"الفرع", fieldDate:"التاريخ", fieldDoctor:"الدكتور", anyDoctor:"أي دكتور متاح", fieldSlot:"المواعيد المتاحة", fieldSource:"مصدر الحجز", chooseService:"اختار الخدمة", chooseBranch:"اختار الفرع", saveBooking:"تأكيد الحجز", pickSlotHint:"اختار الخدمة والفرع، وهتظهرلك الأيام والمواعيد المتاحة", noSlots:"مفيش مواعيد متاحة في اليوم ده — جرّب يوم تاني", fillAll:"كمّل كل البيانات واختار موعد",
   srcCall:"تليفون", srcIg:"إنستجرام", srcFb:"فيسبوك", srcTt:"تيك توك", srcVz:"Vezeeta", srcWhats:"واتساب", srcAd:"إعلان", srcSite:"الموقع", srcWalk:"زيارة",
-  toastBookingSaved:"تم تسجيل الحجز", toastUpdated:"تم التحديث", toastDataRefreshed:"تم تحديث البيانات", toastCantConnect:"تعذّر الاتصال، حاول تاني", toastActionFailed:"العملية ماتمّتش، حاول تاني", toastSlotTaken:"الميعاد اتحجز — اختار ميعاد تاني", toastDuplicate:"المريض عنده حجز بنفس الخدمة في نفس اليوم", toastFiltersCleared:"اتمسحت التصفية", newBookingToast:"حجز جديد", newLeadToast:"استفسار جديد",
-  docSpecialty:"التخصص", docBranches:"الفروع", docServices:"الخدمات", docToday:"حجوزات اليوم", docNext:"الموعد القادم", docLoad:"ضغط اليوم", docSchedule:"الجدول الأسبوعي", docUpcoming:"المواعيد القادمة", noUpcoming:"مفيش مواعيد قادمة", noSchedToday:"إجازة اليوم", dayOff:"إجازة",
+  toastBookingSaved:"تم تسجيل الحجز", toastUpdated:"تم التحديث", toastDataRefreshed:"تم تحديث البيانات", toastCantConnect:"تعذّر الاتصال، حاول تاني", toastActionFailed:"العملية ماتمّتش، حاول تاني", toastSlotTaken:"الموعد ده اتحجز للتو — اختار موعد تاني", toastDuplicate:"المريض عنده حجز بنفس الخدمة في نفس اليوم", toastFiltersCleared:"اتمسحت التصفية", newBookingToast:"حجز جديد", newLeadToast:"استفسار جديد",
+  docSpecialty:"التخصص", docBranches:"الفروع", docServices:"الخدمات", docToday:"حجوزات اليوم", docNext:"الموعد القادم", docLoad:"إشغال اليوم", docSchedule:"الجدول الأسبوعي", docUpcoming:"المواعيد القادمة", noUpcoming:"مفيش مواعيد قادمة", noSchedToday:"لا توجد عيادة اليوم", dayOff:"لا توجد عيادة",
   days:["الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"],
   daysShort:["اثنين","ثلاثاء","أربعاء","خميس","جمعة","سبت","أحد"],
   addressLbl:"العنوان", areaLbl:"المنطقة", branchPhone:"تليفون الفرع", visitsWord:"زيارة", noShowWord:"لم يحضر",
-  installTitle:"ثبّت تطبيق العيادة", installSub:"افتح اللوحة بلمسة من الشاشة الرئيسية", installBtn:"تثبيت", iosSheetTitle:"تثبيت التطبيق على آيفون", iosStep1:"اضغط زر المشاركة في شريط Safari", iosStep2:"اختار «إضافة إلى الشاشة الرئيسية»", iosStep3:"اضغط «إضافة» — والتطبيق هيظهر مع باقي تطبيقاتك", gotIt:"تمام",
-  themeToDark:"تفعيل الوضع الليلي", themeToLight:"تفعيل الوضع النهاري",
-  loginSub:"أهلًا بيك. سجّل دخولك عشان تكمّل", tabSignIn:"تسجيل الدخول", tabSignUp:"إنشاء حساب", fieldEmail:"البريد الإلكتروني", fieldPassword:"كلمة المرور", fieldName:"الاسم", fieldConfirmPassword:"تأكيد كلمة المرور",
-  rememberMe:"افتكرني على الجهاز ده", signIn:"تسجيل الدخول", createAccount:"إنشاء الحساب", logout:"تسجيل الخروج",
-  loginFailed:"الإيميل أو كلمة المرور غلط", loginConnFailed:"تعذّر الاتصال، حاول تاني بعد لحظات", sessionExpired:"انتهت الجلسة، سجّل دخول تاني",
-  pwTooShort:"كلمة المرور لازم تكون 8 حروف على الأقل", pwMismatch:"كلمتين المرور مش زي بعض", signupPending:"تم إنشاء الحساب — في انتظار موافقة الإدارة قبل ما تقدر تدخل",
-  accountPending:"حسابك لسه في انتظار موافقة الإدارة", signupFailed:"الحساب مااتعملش، حاول تاني", accountDisabled:"الحساب ده موقوف — كلّم الإدارة",
-  emailTaken:"الإيميل ده مسجل قبل كده — سجّل دخول بدل ما تعمل حساب جديد", invalidEmail:"البريد الإلكتروني مش صحيح", invalidName:"اكتب اسمك (80 حرف كحد أقصى)",
-  greetMorning:"صباح الخير", greetEvening:"مساء الخير", noNotifs:"مفيش تنبيهات جديدة", markRead:"تعليم الكل كمقروء", currency:"ج", payCash:"كاش", attendTitle:"تأكيد الحضور والدفع", amountPaid:"المبلغ المدفوع", paymentMethod:"طريقة الدفع", payPickHint:"اختار طريقة الدفع", confirmAttend:"تأكيد الحضور والدفع", editAmount:"تعديل المبلغ", saveAmount:"حفظ التعديل", confirmedByLbl:"أكّد بواسطة", toastAttended:"تم تأكيد الحضور والدفع", toastAmountSaved:"تم تحديث المبلغ", needAttendPerm:"محتاج صلاحية تأكيد الحضور", qfBookedPending:"حجزوا ولسه ما حضروش", qfAttended:"حضروا", colBooking:"الحجز", finByPayment:"الدخل حسب طريقة الدفع", noPayment:"غير محدد", defaultAmountNote:"المبلغ متعبّي بسعر الخدمة الافتراضي — عدّله لو اتحاسب بمبلغ مختلف (زيادة خدمة مثلًا).", qfAll:"الكل", qfToday:"النهارده", qfPending:"بانتظار التأكيد", qfLate:"فاتت ومحتاجة تحديث", qfUpcoming:"مؤكدة قادمة", qfNoShow:"لم يحضروا", qfCancelled:"ملغية", qfNew:"جديدة", qfStale:"متأخرة +ساعتين", qfNoAgent:"بدون موظف", qfFollow:"تحتاج متابعة (+يوم)", qfLost:"ضايعة", back:"رجوع", phAppointments:"ابحث باسم المريض أو الهاتف أو رقم الحجز...", phLeads:"ابحث بالاسم أو الهاتف أو الحملة...", phDoctors:"ابحث باسم الدكتور أو التخصص أو الخدمة...", phPatients:"ابحث باسم المريض أو رقم الهاتف...", pickDay:"اختار اليوم", pickDoctor:"اختار الدكتور", tomorrowWord:"بكرة", slotsCount:"مواعيد", firstAt:"أول ميعاد", otherDate:"تاريخ تاني:", noAvailAny:"مفيش مواعيد متاحة في الـ 3 أسابيع الجاية للخدمة والفرع دول — جرّب فرع تاني", pickDoctorHint:"اختار الدكتور عشان تظهر مواعيده", toastForbidden:"مفيش عندك صلاحية للعملية دي", upcomingGroup:"القادمة", doneGroup:"خلصت", lateGroup:"فاتت وتحتاج تحديث الحالة",
-  navStock:"المخزون", titleStock:"المخزون والتكلفة", subStock:"رصيد المستلزمات وتكلفة كل خدمة", navFinance:"الحسابات", titleFinance:"الحسابات", subFinance:"الدخل ونسبة الإشغال لكل فرع",
+  installTitle:"ثبّت تطبيق العيادة", installSub:"افتح النظام بلمسة من الشاشة الرئيسية", installBtn:"تثبيت", iosSheetTitle:"تثبيت التطبيق على آيفون", iosStep1:"اضغط زر المشاركة في شريط Safari", iosStep2:"اختار «إضافة إلى الشاشة الرئيسية»", iosStep3:"اضغط «إضافة» — والتطبيق هيظهر مع باقي تطبيقاتك", gotIt:"تمام",
+  themeToDark:"الوضع الداكن", themeToLight:"الوضع الفاتح",
+  loginSub:"أهلًا بك. سجّل دخولك للمتابعة", tabSignIn:"تسجيل الدخول", tabSignUp:"إنشاء حساب", fieldEmail:"البريد الإلكتروني", fieldPassword:"كلمة المرور", fieldName:"الاسم", fieldConfirmPassword:"تأكيد كلمة المرور",
+  rememberMe:"تذكّرني على هذا الجهاز", signIn:"تسجيل الدخول", createAccount:"إنشاء الحساب", logout:"تسجيل الخروج",
+  loginFailed:"البريد الإلكتروني أو كلمة المرور غير صحيحة", loginConnFailed:"تعذّر الاتصال، حاول تاني بعد لحظات", sessionExpired:"انتهت الجلسة، سجّل دخول تاني",
+  pwTooShort:"كلمة المرور لازم تكون 8 حروف على الأقل", pwMismatch:"كلمتا المرور غير متطابقتين", signupPending:"تم إنشاء الحساب — هتقدر تدخل بعد موافقة الإدارة",
+  accountPending:"حسابك لسه في انتظار موافقة الإدارة", signupFailed:"تعذّر إنشاء الحساب، حاول تاني", accountDisabled:"الحساب ده موقوف — تواصل مع الإدارة",
+  emailTaken:"البريد ده مسجّل بالفعل — سجّل دخولك بدل إنشاء حساب جديد", invalidEmail:"البريد الإلكتروني غير صحيح", invalidName:"اكتب اسمك (80 حرف كحد أقصى)",
+  greetMorning:"صباح الخير", greetEvening:"مساء الخير", noNotifs:"مفيش تنبيهات جديدة", markRead:"تعليم الكل كمقروء", currency:"ج", payCash:"نقدي", attendTitle:"تأكيد الحضور والدفع", amountPaid:"المبلغ المدفوع", paymentMethod:"طريقة الدفع", payPickHint:"اختار طريقة الدفع", confirmAttend:"تأكيد الحضور والدفع", editAmount:"تعديل المبلغ", saveAmount:"حفظ التعديل", confirmedByLbl:"أكّد بواسطة", toastAttended:"تم تأكيد الحضور والدفع", toastAmountSaved:"تم تحديث المبلغ", needAttendPerm:"محتاج صلاحية تأكيد الحضور", qfBookedPending:"حجزوا ولسه ما حضروش", qfAttended:"حضروا", colBooking:"الحجز", finByPayment:"الدخل حسب طريقة الدفع", noPayment:"غير محدد", defaultAmountNote:"المبلغ مسجّل بسعر الخدمة — عدّله لو المريض دفع مبلغ مختلف.", qfAll:"الكل", qfToday:"اليوم", qfPending:"بانتظار التأكيد", qfLate:"فات موعدها", qfUpcoming:"مؤكدة قادمة", qfNoShow:"لم يحضروا", qfCancelled:"ملغية", qfNew:"جديدة", qfStale:"بدون رد +ساعتين", qfNoAgent:"بدون مسؤول", qfFollow:"محتاجة متابعة (+يوم)", qfLost:"بدون حجز", back:"رجوع", phAppointments:"ابحث باسم المريض أو الموبايل أو رقم الحجز...", phLeads:"ابحث بالاسم أو الموبايل أو الحملة...", phDoctors:"ابحث باسم الدكتور أو التخصص أو الخدمة...", phPatients:"ابحث باسم المريض أو الموبايل...", pickDay:"اختار اليوم", pickDoctor:"اختار الدكتور", tomorrowWord:"بكرة", slotsCount:"مواعيد", firstAt:"أول موعد", otherDate:"تاريخ آخر:", noAvailAny:"مفيش مواعيد متاحة خلال 3 أسابيع للخدمة دي في الفرع ده — جرّب فرع تاني", pickDoctorHint:"اختار الدكتور عشان تظهر مواعيده", toastForbidden:"حسابك مالوش صلاحية للعملية دي", upcomingGroup:"القادمة", doneGroup:"انتهت", lateGroup:"فات موعدها ومحتاجة تحديث الحالة",
+  navStock:"المستلزمات الطبية", titleStock:"المستلزمات الطبية والتكلفة", subStock:"رصيد المستلزمات وتكلفة كل خدمة", navFinance:"الحسابات", titleFinance:"الحسابات", subFinance:"الدخل ونسبة الإشغال لكل فرع",
   finTitle:"ملخص الحسابات", finToday:"اليوم", finWeek:"الأسبوع", finMonth:"الشهر", finAll:"الكل", finBranchTitle:"الدخل والإشغال لكل فرع", revByService:"الدخل حسب الخدمة", revByDoctor:"الدخل حسب الدكتور",
   finCollected:"المحصّل (حضروا)", finExpected:"المتوقع (مؤكد وبانتظار)", finAvg:"متوسط قيمة الزيارة", finOccupancy:"نسبة الإشغال", finOccSub:"ساعات محجوزة من ساعات العمل", finVisits:"زيارة", finRange:"الفترة", finNote:"الأسعار الافتراضية من قائمة الخدمات، والمبلغ الفعلي هو اللي بيتسجّل عند تأكيد الحضور.", finTotal:"الإجمالي",
-  waReminder:"تذكير واتساب", remSent:"اتبعت — مستني رد", remConfirmed:"المريض أكّد", remCancelled:"المريض لغى من واتساب", fbLbl:"تقييم المريض", fb3:"ممتاز", fb2:"كويس", fb1:"محتاج تحسين",
-  fuNone:"مفيش متابعة", fuDays:"بعد {n} أيام", fuWeek:"بعد أسبوع", fuTwoWeeks:"بعد أسبوعين", fuMonth:"بعد شهر", fuPickDate:"تاريخ محدد", fuNeeded:"محتاج متابعة؟", fuDateLbl:"تاريخ المتابعة", fuNoteLbl:"سبب المتابعة", fuNotePh:"مثلًا: نتيجة العينة — مراجعة بعد المنظار", fuDateMissing:"اختار تاريخ المتابعة", materialsCost:"تكلفة المستلزمات", netLbl:"الصافي", toastAttendedFu:"تم تأكيد الحضور — المتابعة {d}", followupLbl:"المتابعة", fuPending:"مستنية", fuDone:"تمت", fuCancelled:"اتلغت", fuBooked:"اتحجزت", fuMarkDone:"تمت المتابعة", fuCancel:"إلغاء المتابعة", qfFollowup:"متابعات مستحقة", invalidFollowup:"تاريخ المتابعة لازم يكون بعد النهارده",
-  colNet:"الصافي", finMaterials:"مستلزمات", finNet:"الصافي بعد المستلزمات", finNetSub:"المحصّل ناقص تكلفة المستلزمات", colCollected:"المحصّل", colExpected:"المتوقع", colOccupancy:"الإشغال", amountLbl:"المبلغ", defaultPrice:"سعر الخدمة الافتراضي", recordedAmount:"مبلغ مسجّل", nextUp:"الجاي", noFinData:"مفيش حجوزات في الفترة دي",
-  btnAddLead:"استفسار جديد", newLeadTitle:"استفسار جديد", fieldLeadName:"الاسم", fieldCampaign:"الحملة (اختياري)", fieldAgent:"الموظف المسؤول (اختياري)", optionalService:"الخدمة المطلوبة (اختياري)", saveLead:"حفظ الاستفسار", toastLeadSaved:"تم إضافة الاستفسار", toastDupLead:"فيه استفسار مفتوح بنفس الرقم",
+  waReminder:"تذكير واتساب", remSent:"تم الإرسال — في انتظار رد المريض", remConfirmed:"المريض أكّد", remCancelled:"المريض ألغى عبر واتساب", fbLbl:"تقييم المريض", fb3:"ممتاز", fb2:"جيد", fb1:"محتاج تحسين",
+  fuNone:"مفيش متابعة", fuDays:"بعد {n} أيام", fuWeek:"بعد أسبوع", fuTwoWeeks:"بعد أسبوعين", fuMonth:"بعد شهر", fuPickDate:"تاريخ محدد", fuNeeded:"محتاج متابعة؟", fuDateLbl:"تاريخ المتابعة", fuNoteLbl:"سبب المتابعة", fuNotePh:"مثلًا: نتيجة العينة — مراجعة بعد المنظار", fuDateMissing:"اختار تاريخ المتابعة", materialsCost:"تكلفة المستلزمات", netLbl:"الصافي", toastAttendedFu:"تم تأكيد الحضور — المتابعة {d}", followupLbl:"المتابعة", fuPending:"قيد الانتظار", fuDone:"تمت", fuCancelled:"ملغاة", fuBooked:"تم حجزها", fuMarkDone:"تمت المتابعة", fuCancel:"إلغاء المتابعة", qfFollowup:"متابعات مستحقة", invalidFollowup:"تاريخ المتابعة لازم يكون بعد اليوم",
+  colNet:"الصافي", finMaterials:"مستلزمات", finNet:"الصافي بعد المستلزمات", finNetSub:"المحصّل ناقص تكلفة المستلزمات", colCollected:"المحصّل", colExpected:"المتوقع", colOccupancy:"الإشغال", amountLbl:"المبلغ", defaultPrice:"سعر الخدمة الافتراضي", recordedAmount:"مبلغ مسجّل", nextUp:"القادم", noFinData:"مفيش حجوزات في الفترة دي",
+  btnAddLead:"استفسار جديد", newLeadTitle:"استفسار جديد", fieldLeadName:"الاسم", fieldCampaign:"الحملة (اختياري)", fieldAgent:"المسؤول عن المتابعة (اختياري)", optionalService:"الخدمة المطلوبة (اختياري)", saveLead:"حفظ الاستفسار", toastLeadSaved:"تم إضافة الاستفسار", toastDupLead:"فيه استفسار مفتوح بنفس الرقم",
   rescheduleBtn:"إعادة جدولة", rescheduleTitle:"إعادة جدولة حجز", saveReschedule:"تأكيد الموعد الجديد", toastRescheduled:"تمت إعادة الجدولة",
-  viewList:"قائمة", viewAgenda:"جدول اليوم", agendaEmpty:"الدكتور مش موجود في اليوم ده",
+  viewList:"قائمة", viewAgenda:"جدول اليوم", agendaEmpty:"لا توجد عيادة في هذا اليوم",
   myProfile:"ملفي الشخصي", saveProfile:"حفظ بياناتي", toastProfileSaved:"تم حفظ بياناتك", pEdit:"تعديل بيانات المريض", pBirth:"تاريخ الميلاد", pGender:"الجنس", pMale:"ذكر", pFemale:"أنثى", pNotes:"ملاحظات", pPhoto:"الصورة", pChoosePhoto:"اختيار / التقاط صورة", pRemovePhoto:"حذف الصورة", pSavePatient:"حفظ البيانات", toastPatientSaved:"تم حفظ بيانات المريض", pAge:"السن", pYears:"سنة", pBadPhoto:"الصورة غير صالحة",
   patientProfile:"ملف المريض", pVisits:"زيارات", pBookings:"حجوزات", pNoShows:"لم يحضر", pCancelled:"ملغي", pLastVisit:"آخر زيارة", pNext:"الموعد القادم", pHistory:"سجل الحجوزات", pLeads:"الاستفسارات المرتبطة", pNew:"حجز جديد", pNone:"—",
   gsPatients:"المرضى", gsLeads:"الاستفسارات", gsBookings:"الحجوزات", gsNone:"مفيش نتائج"
  },
- en:{
+ en:{ integN8nTitle:"Automation engine", integGsTitle:"Database",
   brandWord:"Dr. Haytham Rady", brandTag:"Gastroenterology & Endoscopy",
-  linksTitle:"Clinic links", linksHint:"The same links the bot sends when a patient asks for our pages.", linkWeb:"Website",
-  navUsers:"Users", titleUsers:"Users", subUsers:"Who can open the dashboard and what they see", usersTitle:"Users & permissions", usersHint:"Anyone who signs up from the login screen shows up here as “Waiting for approval”. Press “Edit” to activate them and set their permissions and branch.", uPending:"Waiting for approval", uApproved:"Active", uDisabled:"Disabled", uAdmin:"Admin (full access)", uStaff:"Staff", uAllBranches:"All branches", uEdit:"Edit", uSave:"Save", uSaved:"Saved", uSelfLock:"You can't disable your own account or remove your own admin role", uNoUsers:"No users yet", uStatusLbl:"Status", uRoleLbl:"Type", uBranchLbl:"Branch", uPermsLbl:"Permissions", uNoPerms:"No permissions", uLastLogin:"Last login", uNever:"never", uYou:"you", uAdminNote:"Admins see everything in every branch and manage users.", uBranchNote:"Leaving the branch on “All branches” lets this staff member see every branch.", permAttendance:"Attendance & payment", uSaveErr:"Couldn't save, try again",
-  navHome:"Home", navAppointments:"Appointments", navLeads:"Leads", navDoctors:"Schedule", navBranches:"Branches", navPatients:"Patients", navReports:"Reports", navActivity:"Activity log", navStatus:"System Status", integAiTitle:"AI assistant", integAiSub:"Understands WhatsApp messages with AI", titleOpstatus:"System status", subOpstatus:"Connection of the systems that run the clinic", navMore:"More",
+  linksTitle:"Clinic links", linksHint:"The same links the assistant sends when a patient asks for our pages.", linkWeb:"Website",
+  navUsers:"Users", titleUsers:"Users", subUsers:"Who can sign in and what each user can do", usersTitle:"Users & permissions", usersHint:"New accounts appear here as “Waiting for approval”. Press “Edit” to activate an account and set its permissions and branch.", uPending:"Waiting for approval", uApproved:"Active", uDisabled:"Disabled", uAdmin:"Admin (full access)", uStaff:"Staff", uAllBranches:"All branches", uEdit:"Edit", uSave:"Save", uSaved:"Saved", uSelfLock:"You can't disable your own account or remove your own admin role", uNoUsers:"No users yet", uStatusLbl:"Status", uRoleLbl:"Role", uBranchLbl:"Branch", uPermsLbl:"Permissions", uNoPerms:"No permissions", uLastLogin:"Last login", uNever:"Never", uYou:"You", uAdminNote:"Admins see everything in every branch and manage users.", uBranchNote:"Leaving the branch on “All branches” lets this staff member see every branch.", permAttendance:"Attendance & payment", uSaveErr:"Couldn't save. Please try again.",
+  navHome:"Home", navAppointments:"Appointments", navLeads:"Inquiries", navDoctors:"Schedule", navBranches:"Branches", navPatients:"Patients", navReports:"Reports", navActivity:"Activity log", navStatus:"System status", integAiTitle:"AI assistant", integAiSub:"Understands WhatsApp messages with AI", titleOpstatus:"System status", subOpstatus:"Connected services and their status", navMore:"More",
   kickerOperations:"Operations", kickerInsights:"Insights", notifications:"Notifications", export:"Export",
-  btnSync:"Sync now", btnAddBooking:"Add booking", searchPlaceholder:"Search patient, phone, booking ID...",
+  btnSync:"Refresh data", btnAddBooking:"Add booking", searchPlaceholder:"Search patient, phone, booking ID...",
   allBranches:"All branches", allStatuses:"All statuses", allDoctors:"All doctors", allSources:"All sources", btnClearFilters:"Clear filters", advancedFilters:"Advanced filters", fromDate:"From date", toDate:"To date",
   titleHome:"Today at the clinics", subHome:"",
   titleAppointments:"Appointments", subAppointments:"Manage and track every booking",
-  titleLeads:"Leads", subLeads:"Follow up leads from ads and the website",
-  titleDoctors:"Schedule", subDoctors:"Doctor schedules and today's bookings",
+  titleLeads:"Inquiries", subLeads:"Follow up everyone who asked but hasn't booked yet",
+  titleDoctors:"Schedule", subDoctors:"The doctor's hours at each branch and today's bookings",
   titleBranches:"Branches", subBranches:"Compare branch performance",
   titlePatients:"Patients", subPatients:"Patient records and visits",
   titleReports:"Reports", subReports:"Conversion, sources and services",
   titleActivity:"Activity log", subActivity:"Every change made from the dashboard",
-  kpiToday:"Bookings today", kpiPending:"Awaiting confirmation", kpiArrived:"Attended today", kpiMissed:"No-show / cancelled today", kpiNewLeads:"New leads", kpiConv:"Lead conversion", kpiAttend:"Attendance rate",
-  waitingData:"Waiting for data", todayMetric:"Today", ofWhich:"of which", outOf:"out of", arrivedWord:"attended", needsFollowUp:"need follow-up", noneWaiting:"Nothing pending", leadsTotal:"of", leadsWord:"leads", pastVisits:"of past visits", waitingContact:"waiting for first contact", oldNew:"older than 2 hours",
+  kpiToday:"Bookings today", kpiPending:"Awaiting confirmation", kpiArrived:"Attended today", kpiMissed:"No-shows & cancellations today", kpiNewLeads:"New inquiries", kpiConv:"Inquiry conversion", kpiAttend:"Attendance rate",
+  waitingData:"Waiting for data", todayMetric:"Today", ofWhich:"of which", outOf:"out of", arrivedWord:"attended", needsFollowUp:"need follow-up", noneWaiting:"Nothing pending", leadsTotal:"of", leadsWord:"inquiries", pastVisits:"of past visits", waitingContact:"waiting for first contact", oldNew:"older than 2 hours",
   weekBookingsTitle:"Bookings this week", windowTotalLabel:"7-day total", bookingsUnit:"bookings", todayShort:"Today", avgShort:"daily avg",
-  opStatusTitle:"Operational status", connected:"Connected", connecting:"Connecting", working:"Working", offlineShort:"Offline", notLinked:"Not linked yet", ready:"Ready to receive leads",
-  integWaSub:"Automatic booking bot", leadFormTitle:"Lead intake", integLeadSub:"Website form and Meta ads", integN8nSub:"Automation and booking API", integGsSub:"Bookings, leads and schedules", lastSyncLabel:"Last sync",
+  opStatusTitle:"System status", connected:"Connected", connecting:"Connecting", working:"Working", offlineShort:"Offline", notLinked:"Not linked yet", ready:"Ready to receive inquiries",
+  integWaSub:"WhatsApp booking assistant", leadFormTitle:"Inquiry intake", integLeadSub:"Website form and Meta ads", integN8nSub:"Automation and booking API", integGsSub:"Bookings, inquiries and schedules", lastSyncLabel:"Last updated",
   liveConnecting:"Connecting…", liveOnline:"Connected — live data", liveOffline:"Couldn't reach the server — try again in a moment",
   todayApptsTitle:"Today's appointments", viewAll:"View all", details:"Details", noApptsToday:"No appointments today",
-  apptsManageTitle:"Manage appointments", leadsManageTitle:"Lead follow-up", noMatching:"No matching results",
+  apptsManageTitle:"Manage appointments", leadsManageTitle:"Inquiry follow-up", noMatching:"No matching results",
   colTime:"Time", colPatient:"Patient", colService:"Service", colDoctor:"Doctor", colBranch:"Branch", colSource:"Source", colStatus:"Status", colAction:"Action",
-  colLead:"Name", colSourceCampaign:"Source / campaign", colAgent:"Agent", colEntry:"Entered",
-  colToday:"Today", colPendingShort:"Pending", colArrivedShort:"Attended", colNoShow:"No-shows", colAttendRate:"Attendance", colUpcoming:"Upcoming",
+  colLead:"Name", colSourceCampaign:"Source / campaign", colAgent:"Assigned to", colEntry:"Received",
+  colToday:"Today", colPendingShort:"Pending", colArrivedShort:"Attended", colNoShow:"No-shows", colAttendRate:"Attendance rate", colUpcoming:"Upcoming",
   colPhone:"Phone", colVisits:"Visits", colBookings:"Bookings", colLastVisit:"Last visit", colNextAppt:"Next appointment",
-  colLeads:"Leads", colBooked:"Booked", colLost:"Lost", colConvRate:"Conversion", colCampaign:"Campaign",
+  colLeads:"Inquiries", colBooked:"Booked", colLost:"Not booked", colConvRate:"Conversion", colCampaign:"Campaign",
   branchPerformanceTitle:"Branch performance", previous:"Previous", next:"Next", cancel:"Cancel", confirm:"Confirm",
-  funnelTitle:"Lead journey", byServiceTitle:"Bookings by service", byChannelTitle:"Bookings by channel", leadSourcesTitle:"Lead source performance", campaignsTitle:"Campaign performance", perfSummaryTitle:"Performance summary", lostReasonsTitle:"Why leads are lost",
-  funLeads:"Leads in", funContacted:"Contacted", funBooked:"Booked", funAttended:"Attended",
-  repTotalBookings:"Total bookings", repCancelRate:"Cancellation rate", repNoShowRate:"No-show rate", repAvgDaily:"Avg bookings per day", repLostLeads:"Lost leads", repAvgResp:"New leads not contacted",
+  funnelTitle:"Inquiry journey", byServiceTitle:"Bookings by service", byChannelTitle:"Bookings by channel", leadSourcesTitle:"Inquiry source performance", campaignsTitle:"Campaign performance", perfSummaryTitle:"Performance summary", lostReasonsTitle:"Why inquiries did not book",
+  funLeads:"Received", funContacted:"Contacted", funBooked:"Booked", funAttended:"Attended",
+  repTotalBookings:"Total bookings", repCancelRate:"Cancellation rate", repNoShowRate:"No-show rate", repAvgDaily:"Avg bookings per day", repLostLeads:"Inquiries not booked", repAvgResp:"New inquiries not contacted",
   noData:"No data", noReason:"No reason recorded",
   activityTitle:"Activity log", sessionTitle:"Session", sessionState:"Session status", active:"Active", noActivity:"No activity recorded yet", by:"by",
-  statusPending:"Awaiting reply", statusConfirmed:"Confirmed", statusArrived:"Attended", statusNoShow:"No-show", statusCancelled:"Cancelled",
-  lsNew:"New", lsContacted:"Contacted", lsBooked:"Booked", lsLost:"Lost",
-  changeStatus:"Change status", changeStatusTitle:"Change status", currentStatus:"Current status", notAvailable:"Not available now", onlyAfterDate:"Available on the appointment day",
-  confirmChange:"Confirm change", confirmChangeText:"Change {what} status to “{to}”?", lossReason:"Loss reason", chooseReason:"Choose a reason",
-  bookingN:"booking", leadN:"lead", patientLbl:"Patient", phoneLbl:"Phone", serviceLbl:"Service", branchLbl:"Branch", doctorLbl:"Doctor", dateLbl:"Date", timeLbl:"Time", sourceLbl:"Source", statusLbl:"Status", createdLbl:"Created", campaignLbl:"Campaign", agentLbl:"Agent", entryLbl:"Entered", updatedLbl:"Last update", lossLbl:"Loss reason", linkedBooking:"Linked booking",
-  bookNow:"Book appointment", saveAgent:"Save agent", agentPlaceholder:"Responsible agent", call:"Call", whatsapp:"WhatsApp",
-  newBookingTitle:"New booking", fieldPatient:"Patient name", fieldPhone:"Mobile number", fieldService:"Service", fieldBranch:"Branch", fieldDate:"Date", fieldDoctor:"Doctor", anyDoctor:"Any available doctor", fieldSlot:"Available times", fieldSource:"Booking source", chooseService:"Choose a service", chooseBranch:"Choose a branch", saveBooking:"Confirm booking", pickSlotHint:"Choose a service and branch to see available days and doctors", noSlots:"No slots available that day — try another day", fillAll:"Complete all fields and pick a time",
+  statusPending:"Awaiting confirmation", statusConfirmed:"Confirmed", statusArrived:"Attended", statusNoShow:"No-show", statusCancelled:"Cancelled",
+  lsNew:"New", lsContacted:"Contacted", lsBooked:"Booked", lsLost:"Not booked",
+  changeStatus:"Change status", changeStatusTitle:"Change status", currentStatus:"Current status", notAvailable:"Not available right now", onlyAfterDate:"Available on the appointment day",
+  confirmChange:"Confirm change", confirmChangeText:"Change the status of {what} to “{to}”?", lossReason:"Reason not booked", chooseReason:"Choose a reason",
+  bookingN:"Booking", leadN:"Inquiry", patientLbl:"Patient", phoneLbl:"Phone", serviceLbl:"Service", branchLbl:"Branch", doctorLbl:"Doctor", dateLbl:"Date", timeLbl:"Time", sourceLbl:"Source", statusLbl:"Status", createdLbl:"Created", campaignLbl:"Campaign", agentLbl:"Assigned to", entryLbl:"Received", updatedLbl:"Last update", lossLbl:"Reason not booked", linkedBooking:"Linked booking",
+  bookNow:"Book appointment", saveAgent:"Save", agentPlaceholder:"Staff member's name", call:"Call", whatsapp:"WhatsApp",
+  newBookingTitle:"New booking", fieldPatient:"Patient name", fieldPhone:"Mobile number", fieldService:"Service", fieldBranch:"Branch", fieldDate:"Date", fieldDoctor:"Doctor", anyDoctor:"Any available doctor", fieldSlot:"Available times", fieldSource:"Booking source", chooseService:"Choose a service", chooseBranch:"Choose a branch", saveBooking:"Confirm booking", pickSlotHint:"Choose a service and branch to see available days and times", noSlots:"No times available that day — try another day", fillAll:"Complete all fields and pick a time",
   srcCall:"Phone", srcIg:"Instagram", srcFb:"Facebook", srcTt:"TikTok", srcVz:"Vezeeta", srcWhats:"WhatsApp", srcAd:"Ad", srcSite:"Website", srcWalk:"Walk-in",
-  toastBookingSaved:"Booking saved", toastUpdated:"Updated", toastDataRefreshed:"Data refreshed", toastCantConnect:"Couldn't reach the server", toastActionFailed:"Couldn't complete the action, please try again", toastSlotTaken:"That slot was just taken — pick another", toastDuplicate:"This patient already has the same service booked that day", toastFiltersCleared:"Filters cleared", newBookingToast:"New booking", newLeadToast:"New lead",
-  docSpecialty:"Specialty", docBranches:"Branches", docServices:"Services", docToday:"Bookings today", docNext:"Next appointment", docLoad:"Today's load", docSchedule:"Weekly schedule", docUpcoming:"Upcoming appointments", noUpcoming:"No upcoming appointments", noSchedToday:"Off today", dayOff:"Off",
+  toastBookingSaved:"Booking saved", toastUpdated:"Updated", toastDataRefreshed:"Data refreshed", toastCantConnect:"Couldn't reach the server. Please try again.", toastActionFailed:"Couldn't complete the action, please try again", toastSlotTaken:"That time was just taken — choose another", toastDuplicate:"This patient already has the same service booked that day", toastFiltersCleared:"Filters cleared", newBookingToast:"New booking", newLeadToast:"New inquiry",
+  docSpecialty:"Specialty", docBranches:"Branches", docServices:"Services", docToday:"Bookings today", docNext:"Next appointment", docLoad:"Today's occupancy", docSchedule:"Weekly schedule", docUpcoming:"Upcoming appointments", noUpcoming:"No upcoming appointments", noSchedToday:"No clinic today", dayOff:"No clinic",
   days:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
   daysShort:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
   addressLbl:"Address", areaLbl:"Area", branchPhone:"Branch phone", visitsWord:"visits", noShowWord:"no-show",
   installTitle:"Install the clinic app", installSub:"Open the dashboard in one tap from your home screen", installBtn:"Install", iosSheetTitle:"Install on iPhone", iosStep1:"Tap the Share button in Safari's toolbar", iosStep2:"Choose “Add to Home Screen”", iosStep3:"Tap “Add” — the app appears with your other apps", gotIt:"Got it",
-  themeToDark:"Switch to dark mode", themeToLight:"Switch to light mode",
+  themeToDark:"Dark mode", themeToLight:"Light mode",
   loginSub:"Welcome back. Sign in to continue", tabSignIn:"Sign in", tabSignUp:"Create account", fieldEmail:"Email", fieldPassword:"Password", fieldName:"Name", fieldConfirmPassword:"Confirm password",
-  rememberMe:"Remember me on this device", signIn:"Sign in", createAccount:"Create account", logout:"Log out",
-  loginFailed:"Incorrect email or password", loginConnFailed:"Couldn't reach the login server", sessionExpired:"Your session expired, please sign in again",
-  pwTooShort:"Password must be at least 8 characters", pwMismatch:"Passwords don't match", signupPending:"Account created — waiting for admin approval before you can sign in",
-  accountPending:"Your account is still waiting for admin approval", signupFailed:"Couldn't create the account", accountDisabled:"This account is disabled — contact the admin",
+  rememberMe:"Remember me on this device", signIn:"Sign in", createAccount:"Create account", logout:"Sign out",
+  loginFailed:"Incorrect email or password", loginConnFailed:"Couldn't reach the server. Try again in a moment.", sessionExpired:"Your session expired, please sign in again",
+  pwTooShort:"Password must be at least 8 characters", pwMismatch:"Passwords don't match", signupPending:"Account created — you can sign in once an admin approves it",
+  accountPending:"Your account is still waiting for admin approval", signupFailed:"Couldn't create the account. Please try again.", accountDisabled:"This account is disabled — contact the clinic admin",
   emailTaken:"This email is already registered — sign in instead", invalidEmail:"That email address isn't valid", invalidName:"Enter your name (80 characters max)",
-  greetMorning:"Good morning", greetEvening:"Good evening", noNotifs:"No new notifications", markRead:"Mark all as read", currency:"EGP", payCash:"Cash", attendTitle:"Confirm attendance & payment", amountPaid:"Amount paid", paymentMethod:"Payment method", payPickHint:"Choose a payment method", confirmAttend:"Confirm attendance & payment", editAmount:"Edit amount", saveAmount:"Save changes", confirmedByLbl:"Confirmed by", toastAttended:"Attendance and payment confirmed", toastAmountSaved:"Amount updated", needAttendPerm:"Needs the attendance permission", qfBookedPending:"Booked, not attended yet", qfAttended:"Attended", colBooking:"Booking", finByPayment:"Revenue by payment method", noPayment:"Unspecified", defaultAmountNote:"Pre-filled with the default service price — change it if the bill is different (extra service, for example).", qfAll:"All", qfToday:"Today", qfPending:"Awaiting confirmation", qfLate:"Past time — update", qfUpcoming:"Confirmed upcoming", qfNoShow:"No-shows", qfCancelled:"Cancelled", qfNew:"New", qfStale:"Overdue 2h+", qfNoAgent:"No agent", qfFollow:"Needs follow-up (1d+)", qfLost:"Lost", back:"Back", phAppointments:"Search patient, phone or booking ID...", phLeads:"Search customer, phone or campaign...", phDoctors:"Search doctor, specialty or service...", phPatients:"Search patient name or phone...", pickDay:"Pick a day", pickDoctor:"Pick a doctor", tomorrowWord:"Tomorrow", slotsCount:"slots", firstAt:"first at", otherDate:"Other date:", noAvailAny:"No availability in the next 3 weeks for this service and branch — try another branch", pickDoctorHint:"Pick a doctor to see their times", toastForbidden:"You do not have permission for this action", upcomingGroup:"Upcoming", doneGroup:"Finished", lateGroup:"Past time — update status",
-  navStock:"Stock", titleStock:"Stock & cost", subStock:"Supplies on hand and cost per service", navFinance:"Accounts", titleFinance:"Accounts", subFinance:"Revenue and occupancy per branch",
-  finTitle:"Accounts summary", finToday:"Today", finWeek:"Week", finMonth:"Month", finAll:"All", finBranchTitle:"Revenue and occupancy per branch", revByService:"Revenue by service", revByDoctor:"Revenue by doctor",
-  finCollected:"Collected (attended)", finExpected:"Expected (confirmed & pending)", finAvg:"Average visit value", finOccupancy:"Occupancy", finOccSub:"booked hours of working hours", finVisits:"visits", finRange:"Period", finNote:"Default prices come from the service list; the actual amount is the one recorded when attendance is confirmed.", finTotal:"Total",
-  waReminder:"WhatsApp reminder", remSent:"Sent — awaiting reply", remConfirmed:"Patient confirmed", remCancelled:"Patient cancelled on WhatsApp", fbLbl:"Patient feedback", fb3:"Excellent", fb2:"Good", fb1:"Needs improvement",
-  fuNone:"No follow-up", fuDays:"In {n} days", fuWeek:"In a week", fuTwoWeeks:"In two weeks", fuMonth:"In a month", fuPickDate:"Pick a date", fuNeeded:"Follow-up needed?", fuDateLbl:"Follow-up date", fuNoteLbl:"Follow-up reason", fuNotePh:"e.g. temporary filling — place the final filling", fuDateMissing:"Pick the follow-up date", suppliesCost:"Material cost", netLbl:"Net", toastAttendedFu:"Attendance confirmed — follow-up {d}", followupLbl:"Follow-up", fuPending:"Pending", fuDone:"Done", fuCancelled:"Cancelled", fuBooked:"Booked", fuMarkDone:"Follow-up done", fuCancel:"Cancel follow-up", qfFollowup:"Follow-ups due", invalidFollowup:"The follow-up date must be after today",
-  colNet:"Net", finSupplies:"supplies", finNet:"Net after supplies", finNetSub:"Collected minus material costs", colCollected:"Collected", colExpected:"Expected", colOccupancy:"Occupancy", amountLbl:"Amount", defaultPrice:"Default service price", recordedAmount:"Recorded amount", nextUp:"Next", noFinData:"No bookings in this period",
-  btnAddLead:"New lead", newLeadTitle:"New lead", fieldLeadName:"Customer name", fieldCampaign:"Campaign (optional)", fieldAgent:"Responsible agent (optional)", optionalService:"Requested service (optional)", saveLead:"Save lead", toastLeadSaved:"Lead added", toastDupLead:"An open lead with this number already exists",
+  greetMorning:"Good morning", greetEvening:"Good evening", noNotifs:"No new notifications", markRead:"Mark all as read", currency:"EGP", payCash:"Cash", attendTitle:"Confirm attendance & payment", amountPaid:"Amount paid", paymentMethod:"Payment method", payPickHint:"Choose a payment method", confirmAttend:"Confirm attendance & payment", editAmount:"Edit amount", saveAmount:"Save changes", confirmedByLbl:"Confirmed by", toastAttended:"Attendance and payment confirmed", toastAmountSaved:"Amount updated", needAttendPerm:"Needs the attendance permission", qfBookedPending:"Booked, not attended yet", qfAttended:"Attended", colBooking:"Booking", finByPayment:"Revenue by payment method", noPayment:"Unspecified", defaultAmountNote:"Pre-filled with the service price — change it if the patient paid a different amount.", qfAll:"All", qfToday:"Today", qfPending:"Awaiting confirmation", qfLate:"Overdue", qfUpcoming:"Confirmed upcoming", qfNoShow:"No-shows", qfCancelled:"Cancelled", qfNew:"New", qfStale:"No reply 2h+", qfNoAgent:"Unassigned", qfFollow:"Needs follow-up (1d+)", qfLost:"Not booked", back:"Back", phAppointments:"Search patient, phone or booking ID...", phLeads:"Search name, phone or campaign...", phDoctors:"Search doctor, specialty or service...", phPatients:"Search patient name or phone...", pickDay:"Choose a day", pickDoctor:"Choose a doctor", tomorrowWord:"Tomorrow", slotsCount:"times", firstAt:"first at", otherDate:"Other date:", noAvailAny:"No availability in the next 3 weeks for this service and branch — try another branch", pickDoctorHint:"Choose a doctor to see their times", toastForbidden:"You don't have permission for this action", upcomingGroup:"Upcoming", doneGroup:"Completed", lateGroup:"Overdue — status needs updating",
+  navStock:"Medical supplies", titleStock:"Medical supplies & cost", subStock:"Supplies on hand and cost per service", navFinance:"Finance", titleFinance:"Finance", subFinance:"Revenue and occupancy per branch",
+  finTitle:"Finance summary", finToday:"Today", finWeek:"Week", finMonth:"Month", finAll:"All", finBranchTitle:"Revenue and occupancy per branch", revByService:"Revenue by service", revByDoctor:"Revenue by doctor",
+  finCollected:"Collected (attended)", finExpected:"Expected (confirmed & pending)", finAvg:"Average visit value", finOccupancy:"Occupancy", finOccSub:"of working hours booked", finVisits:"visits", finRange:"Period", finNote:"Default prices come from the service list; the actual amount is the one recorded when attendance is confirmed.", finTotal:"Total",
+  waReminder:"WhatsApp reminder", remSent:"Sent — awaiting the patient’s reply", remConfirmed:"Patient confirmed", remCancelled:"Patient cancelled on WhatsApp", fbLbl:"Patient feedback", fb3:"Excellent", fb2:"Good", fb1:"Needs improvement",
+  fuNone:"No follow-up", fuDays:"In {n} days", fuWeek:"In a week", fuTwoWeeks:"In two weeks", fuMonth:"In a month", fuPickDate:"Specific date", fuNeeded:"Follow-up needed?", fuDateLbl:"Follow-up date", fuNoteLbl:"Follow-up reason", fuNotePh:"e.g. biopsy result — review after endoscopy", fuDateMissing:"Choose the follow-up date", materialsCost:"Supplies cost", netLbl:"Net", toastAttendedFu:"Attendance confirmed — follow-up {d}", followupLbl:"Follow-up", fuPending:"Pending", fuDone:"Done", fuCancelled:"Cancelled", fuBooked:"Booked", fuMarkDone:"Follow-up done", fuCancel:"Cancel follow-up", qfFollowup:"Follow-ups due", invalidFollowup:"The follow-up date must be after today",
+  colNet:"Net", finMaterials:"supplies", finNet:"Net after supplies", finNetSub:"Collected minus supplies cost", colCollected:"Collected", colExpected:"Expected", colOccupancy:"Occupancy", amountLbl:"Amount", defaultPrice:"Default service price", recordedAmount:"Recorded amount", nextUp:"Next", noFinData:"No bookings in this period",
+  btnAddLead:"New inquiry", newLeadTitle:"New inquiry", fieldLeadName:"Name", fieldCampaign:"Campaign (optional)", fieldAgent:"Assigned to (optional)", optionalService:"Requested service (optional)", saveLead:"Save inquiry", toastLeadSaved:"Inquiry added", toastDupLead:"An open inquiry with this number already exists",
   rescheduleBtn:"Reschedule", rescheduleTitle:"Reschedule booking", saveReschedule:"Confirm new time", toastRescheduled:"Booking rescheduled",
-  viewList:"List", viewAgenda:"Day schedule", agendaEmpty:"No doctors are working that day",
-  myProfile:"My profile", saveProfile:"Save my details", toastProfileSaved:"Your details were saved", pEdit:"Edit patient details", pBirth:"Birth date", pGender:"Gender", pMale:"Male", pFemale:"Female", pNotes:"Notes", pPhoto:"Photo", pChoosePhoto:"Choose / take photo", pRemovePhoto:"Remove photo", pSavePatient:"Save details", toastPatientSaved:"Patient details saved", pAge:"Age", pYears:"yrs", pBadPhoto:"Invalid photo",
-  patientProfile:"Patient profile", pVisits:"Visits", pBookings:"Bookings", pNoShows:"No-shows", pCancelled:"Cancelled", pLastVisit:"Last visit", pNext:"Next appointment", pHistory:"Booking history", pLeads:"Linked leads", pNew:"New booking", pNone:"—",
-  gsPatients:"Patients", gsLeads:"Leads", gsBookings:"Bookings", gsNone:"No results"
+  viewList:"List", viewAgenda:"Day schedule", agendaEmpty:"No clinic on this day",
+  myProfile:"My profile", saveProfile:"Save my details", toastProfileSaved:"Your details were saved", pEdit:"Edit patient details", pBirth:"Birth date", pGender:"Gender", pMale:"Male", pFemale:"Female", pNotes:"Notes", pPhoto:"Photo", pChoosePhoto:"Choose or take a photo", pRemovePhoto:"Remove photo", pSavePatient:"Save details", toastPatientSaved:"Patient details saved", pAge:"Age", pYears:"years", pBadPhoto:"This photo can't be used",
+  patientProfile:"Patient profile", pVisits:"Visits", pBookings:"Bookings", pNoShows:"No-shows", pCancelled:"Cancelled", pLastVisit:"Last visit", pNext:"Next appointment", pHistory:"Booking history", pLeads:"Linked inquiries", pNew:"New booking", pNone:"—",
+  gsPatients:"Patients", gsLeads:"Inquiries", gsBookings:"Bookings", gsNone:"No results"
  }
 };
 function t(key){ return (I18N[LANG]&&I18N[LANG][key]) || I18N.ar[key] || key; }
@@ -2686,7 +2686,7 @@ const LS={
   'ضايع':{c:'red',key:'lsLost',p:'r'}
 };
 const LS_ORDER=['جديد','تم الاتصال','تم الحجز','ضايع'];
-const LOSS_REASONS=['السعر عالي','مش بيرد','بعيد عن الفروع','حجز عند دكتور تاني','مش مهتم','رقم غلط','أخرى'];
+const LOSS_REASONS=['السعر مرتفع','لا يرد','بعيد عن الفروع','حجز عند دكتور تاني','غير مهتم','رقم خاطئ','أخرى'];
 const SOURCES_BOOK=[['تليفون','srcCall'],['واتساب','srcWhats'],['إنستجرام','srcIg'],['فيسبوك','srcFb'],['تيك توك','srcTt'],['الموقع','srcSite'],['Vezeeta','srcVz'],['زيارة','srcWalk'],['إعلان','srcAd']];
 const PAYS=['كاش','فيزا','إنستاباي','تقسيط'];
 function bsLabel(s){ const m=BS[s]; return m?t(m.key):(s||'—'); }
@@ -2754,21 +2754,24 @@ const EN_NAMES={
  'كشف واستشارة':'Consultation','متابعة':'Follow-up visit','منظار معدة':'Upper endoscopy','منظار قولون':'Colonoscopy','منظار معدة وقولون':'Upper endoscopy + colonoscopy','بالونة المعدة':'Gastric balloon','الكبسولة الذكية':'Smart capsule balloon','علاج الارتجاع بالمنظار':'Endoscopic reflux treatment','إزالة زوائد القولون':'Colon polyp removal',
  'التجمع الخامس':'Fifth Settlement','مدينتي':'Madinaty','الرحاب':'El Rehab','القاهرة الجديدة':'New Cairo','التجمع':'Tagamoa',
  'د. هيثم راضي':'Dr. Haytham Rady','استشاري الجهاز الهضمي والمناظير':'Consultant, Gastroenterology & Endoscopy',
- 'السعر عالي':'Price too high','مش بيرد':'Not responding','بعيد عن الفروع':'Too far from branches','حجز عند دكتور تاني':'Booked elsewhere','مش مهتم':'Not interested','رقم غلط':'Wrong number','أخرى':'Other',
+ 'السعر عالي':'Price too high','السعر مرتفع':'Price too high','لا يرد':'Not responding','غير مهتم':'Not interested','رقم خاطئ':'Wrong number','مش بيرد':'Not responding','بعيد عن الفروع':'Too far from branches','حجز عند دكتور تاني':'Booked elsewhere','مش مهتم':'Not interested','رقم غلط':'Wrong number','أخرى':'Other',
  'فورم الموقع':'Website form','إعلان فيسبوك':'Facebook ad','إعلان إنستجرام':'Instagram ad','تعليق إنستجرام':'Instagram comment','تليفون':'Phone','إنستجرام':'Instagram','فيسبوك':'Facebook','تيك توك':'TikTok','واتساب':'WhatsApp','إعلان':'Ad','الموقع':'Website','اتصال':'Call','زيارة':'Walk-in',
- 'كاش':'Cash','فيزا':'Visa','إنستاباي':'InstaPay','تقسيط':'Installments','غير محدد':'Not specified',
- 'تغيير حالة ليد':'Lead status changed','إعادة جدولة حجز':'Booking rescheduled','تأكيد حضور ودفع':'Attendance & payment confirmed','تحديث الملف الشخصي':'Profile updated','تحديث ليد':'Lead updated','تحويل ليد لحجز':'Lead converted to booking','تعديل مبلغ':'Amount edited','تغيير حالة حجز':'Booking status changed','حجز جديد':'New booking','ليد جديد':'New lead','متابعة اتحجزت':'Follow-up booked','المريض لغى الموعد':'Patient cancelled the appointment','المريض عدّل موعده':'Patient rescheduled','المريض أكّد الموعد':'Patient confirmed the appointment','طلب التحدث مع موظف':'Asked for a staff member','حالة عاجلة من واتساب':'Urgent case from WhatsApp','تقييم زيارة':'Visit rating','ملاحظة تقييم':'Rating note',
- 'لم يحضر':'No-show','حضر':'Attended','مؤكد':'Confirmed','ملغي':'Cancelled','بانتظار الرد':'Awaiting reply','تم الاتصال':'Contacted','تم الحجز':'Booked','ضايع':'Lost','جديد':'New','خامات':'materials','ج':'EGP'
+ 'كاش':'Cash','فيزا':'Card','إنستاباي':'InstaPay','تقسيط':'Installments','غير محدد':'Unspecified',
+ 'تغيير حالة ليد':'Inquiry status changed','استفسار جديد':'New inquiry','تحديث استفسار':'Inquiry updated','تحويل استفسار لحجز':'Inquiry converted to booking','مستلزمات':'supplies','المساعد الذكي':'AI assistant','الرصيد':'balance','حد أدنى':'reorder at','تكلفة':'cost','رصيد افتتاحي':'Opening balance','إلغاء حضور حجز':'Attendance undone','صورة':'photo','حذف الصورة':'photo removed','بالونة معدة 6 شهور':'Gastric balloon (6 months)','بالونة معدة 12 شهر':'Gastric balloon (12 months)','كبسولة بالون ذكية':'Swallowable balloon capsule','ملقط عينات':'Biopsy forceps','سلك استئصال زوائد':'Polypectomy snare','مشبك وقف نزيف':'Hemostatic clip','مستلزمات تخدير':'Sedation supplies','طقم تعقيم منظار':'Endoscope reprocessing kit','طقم علاج الارتجاع':'Reflux treatment kit','قطعة':'piece','جلسة':'session','طقم':'kit','حملة البالونة':'Balloon campaign','بحث Google':'Google search','إعلان المناظير':'Endoscopy ad','حضور حجز':'Attendance','الدور الثاني':'2nd floor','عيادة':'Clinic','مول CMC الطبي':'CMC Medical Mall','التسعين الشمالي':'North 90th Street','ميديكال بارك إيليت':'Medical Park Elite','بجوار بوابة':'next to Gate','مول All Seasons Park':'All Seasons Park Mall','توريد مستلزمات':'Supplies received','صرف مستلزمات':'Supplies used','تعديل صنف مستلزمات':'Supply item edited','صنف مستلزمات جديد':'New supply item','تعديل مستخدم':'User edited','تحديد متابعة':'Follow-up set','تحديث متابعة':'Follow-up updated','السكرتارية':'Reception','متابعة بعد الإجراء':'Post-procedure follow-up','توريد من المورد':'Supplier delivery','إعادة جدولة حجز':'Booking rescheduled','تأكيد حضور ودفع':'Attendance & payment confirmed','تحديث الملف الشخصي':'Profile updated','تحديث ليد':'Inquiry updated','تحويل ليد لحجز':'Inquiry converted to booking','تعديل مبلغ':'Amount edited','تغيير حالة حجز':'Booking status changed','حجز جديد':'New booking','ليد جديد':'New inquiry','متابعة اتحجزت':'Follow-up booked','المريض لغى الموعد':'Patient cancelled the appointment','المريض عدّل موعده':'Patient rescheduled','المريض أكّد الموعد':'Patient confirmed the appointment','طلب التحدث مع موظف':'Asked for a staff member','حالة عاجلة من واتساب':'Urgent case from WhatsApp','تقييم زيارة':'Visit rating','ملاحظة تقييم':'Rating note',
+ 'لم يحضر':'No-show','حضر':'Attended','مؤكد':'Confirmed','ملغي':'Cancelled','بانتظار الرد':'Awaiting confirmation','تم الاتصال':'Contacted','تم الحجز':'Booked','ضايع':'Not booked','جديد':'New','خامات':'supplies','ج':'EGP'
 };
+const AR_NAMES={'كاش':'نقدي','فيزا':'بطاقة','ضايع':'بدون حجز','تم الاتصال':'تم التواصل','بانتظار الرد':'بانتظار التأكيد','مش بيرد':'لا يرد','مش مهتم':'غير مهتم','رقم غلط':'رقم خاطئ','السعر عالي':'السعر مرتفع','فورم الموقع':'نموذج الموقع','الليدز':'الاستفسارات','ليد جديد':'استفسار جديد','تحديث ليد':'تحديث استفسار','تحويل ليد لحجز':'تحويل استفسار لحجز','تغيير حالة ليد':'تغيير حالة استفسار','مستني الموافقة':'في انتظار الموافقة','خامات':'مستلزمات','متابعة اتحجزت':'تم حجز متابعة'};
+const mkRe=o=>new RegExp('(?<![\\u0600-\\u06FF])('+Object.keys(o).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\u0600-\\u06FF])','g');
+const AR_RE=mkRe(AR_NAMES);
 const EN_RE=new RegExp('(?<![\\u0600-\\u06FF])('+Object.keys(EN_NAMES).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\u0600-\\u06FF])','g');
 function enifyNode(root){
-  if(LANG!=='en') return;
+  const RE=LANG==='en'?EN_RE:AR_RE, NM=LANG==='en'?EN_NAMES:AR_NAMES;
   const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>/[\u0600-\u06FF]/.test(n.nodeValue)&&!n.parentElement.closest('script,style,textarea,input')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
   const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
-  nodes.forEach(n=>{ const v=n.nodeValue.replace(EN_RE,m=>EN_NAMES[m]); if(v!==n.nodeValue) n.nodeValue=v; });
+  nodes.forEach(n=>{ let v=n.nodeValue.replace(RE,m=>NM[m]); if(LANG==='en') v=v.replace(/\s*\u060c\s*/g,', '); if(v!==n.nodeValue) n.nodeValue=v; });
 }
 let enPending=false;
-new MutationObserver(()=>{ if(LANG!=='en'||enPending) return; enPending=true; setTimeout(()=>{ enPending=false; enifyNode(document.body); },30); }).observe(document.body,{childList:true,subtree:true,characterData:true});
+new MutationObserver(()=>{ if(enPending) return; enPending=true; setTimeout(()=>{ enPending=false; enifyNode(document.body); },30); }).observe(document.body,{childList:true,subtree:true,characterData:true});
 function applyLanguage(lang){
   LANG=lang; localStorage.setItem('drh-lang',lang);
   document.documentElement.lang=lang; document.documentElement.dir=lang==='ar'?'rtl':'ltr';
@@ -2842,7 +2845,7 @@ function setConnection(state){
   document.querySelectorAll('.conn-dot').forEach(d=>d.className='conn-dot '+cls);
   const rb=$("#refresh"); if(rb) rb.title=long;
   const lp=$("#livePill"); if(lp) lp.className='live-pill '+cls;
-  const lpt=$("#livePillText"); if(lpt) lpt.textContent=state==="online"?"Live":short;
+  const lpt=$("#livePillText"); if(lpt) lpt.textContent=state==="online"?(LANG==='ar'?'مباشر':'Live'):short;
   renderSyncAgo();
   setIntegState($("#n8nState"),cls,state==="online"?t('working'):short);
   setIntegState($("#gsState"),cls,short);
@@ -2941,7 +2944,7 @@ function fillSelects(){
   const keepB=$("#branch").value, keepD=$("#doctorFilter").value;
   $("#branch").innerHTML=`<option value="all">${t('allBranches')}</option>`+D.branches.map(b=>`<option value="${escHtml(b.branch)}">${escHtml(b.branch)}</option>`).join('');
   if([...$("#branch").options].some(o=>o.value===keepB)) $("#branch").value=keepB;
-  $("#doctorFilter").innerHTML=`<option value="all">${t('allDoctors')}</option>`+D.doctors.map(d=>`<option value="${escHtml(d.doctor)}">${escHtml(d.doctor)}</option>`).join('');
+  $("#doctorFilter").innerHTML=`<option value="all">${t('allDoctors')}</option>`+D.doctors.map(d=>`<option value="${escHtml(d.doctor)}">${escHtml(d.doctor)}</option>`).join(''); $("#doctorFilter").closest(".advanced-field").style.display=D.doctors.length<2?"none":"";
   if([...$("#doctorFilter").options].some(o=>o.value===keepD)) $("#doctorFilter").value=keepD;
   fillSectionFilters();
 }
@@ -3108,36 +3111,36 @@ function renderStock(){
   const items=D.stock; const low=items.filter(s=>stkState(s)!=='ok');
   const dot=$("#navStockDot"); if(dot) dot.hidden=!low.length||!can('stock');
   if(!can('stock')) return;
-  $("#stkSumTitle").textContent=ts('ملخص المخزون','Stock summary'); $("#stkItemsTitle").textContent=ts('الأصناف','Items'); $("#stkNewLbl").textContent=ts('صنف جديد','New item');
-  $("#stkCostTitle").textContent=ts('تكلفة وهامش كل خدمة','Cost & margin per service'); $("#stkMovesTitle").textContent=ts('حركة المخزون','Stock movements');
+  $("#stkSumTitle").textContent=ts('ملخص المستلزمات','Supplies summary'); $("#stkItemsTitle").textContent=ts('الأصناف','Items'); $("#stkNewLbl").textContent=ts('صنف جديد','New item');
+  $("#stkCostTitle").textContent=ts('تكلفة وهامش كل خدمة','Cost & margin per service'); $("#stkMovesTitle").textContent=ts('حركة المستلزمات','Supply movements');
   const value=sum(items,s=>Math.max(nnum(s.qty),0)*nnum(s.unit_cost));
   const since=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
   const used=sum(D.stock_moves.filter(m=>String(m.time).slice(0,10)>=since&&nnum(m.change)<0),m=>{ const st=items.find(x=>x.item===m.item); return -nnum(m.change)*(st?nnum(st.unit_cost):0); });
-  box.innerHTML=`<div class="fin-kpi hl"><small>${ts('قيمة المخزون الحالي','Stock value')}</small><b>${money(value)}</b><span>${items.length} ${ts('صنف','items')}</span></div>
-  <div class="fin-kpi"><small>${ts('محتاج طلب','Needs reorder')}</small><b>${low.length}</b><span>${low.length?escHtml(low.slice(0,2).map(s=>s.item).join('، '))+(low.length>2?'…':''):ts('كل الأصناف متوفرة','All items in stock')}</span></div>
+  box.innerHTML=`<div class="fin-kpi hl"><small>${ts('قيمة المستلزمات الحالية','Supplies value')}</small><b>${money(value)}</b><span>${items.length} ${ts('صنف','items')}</span></div>
+  <div class="fin-kpi"><small>${ts('تحتاج إعادة طلب','Need reordering')}</small><b>${low.length}</b><span>${low.length?escHtml(low.slice(0,2).map(s=>s.item).join('، '))+(low.length>2?'…':''):ts('كل الأصناف متوفرة','All items in stock')}</span></div>
   <div class="fin-kpi"><small>${ts('المصروف آخر 30 يوم','Used in last 30 days')}</small><b>${money(used)}</b><span>${ts('بتكلفة الوحدة الحالية','At current unit cost')}</span></div>
-  <div class="fin-kpi"><small>${ts('خدمات لها تكلفة محسوبة','Services with a costed recipe')}</small><b>${D.services.filter(s=>recipeOf(s.service).length).length} / ${D.services.length}</b><span>${ts('من مكوّنات كل خدمة','From each service recipe')}</span></div>`;
-  $("#stkHead").innerHTML=`<tr><th>${ts('الصنف','Item')}</th><th>${ts('الرصيد','On hand')}</th><th>${ts('الحد الأدنى','Min')}</th><th>${ts('تكلفة الوحدة','Unit cost')}</th><th>${ts('قيمة الرصيد','Value')}</th><th>${ts('الحالة','Status')}</th><th>${ts('إجراء','Action')}</th></tr>`;
-  const lbl={ok:ts('متوفر','In stock'),low:ts('قرّب يخلص','Low'),out:ts('خلص','Out')};
+  <div class="fin-kpi"><small>${ts('خدمات لها تكلفة محسوبة','Services with a calculated cost')}</small><b>${D.services.filter(s=>recipeOf(s.service).length).length} / ${D.services.length}</b><span>${ts('من مستلزمات كل خدمة','From the supplies each service uses')}</span></div>`;
+  $("#stkHead").innerHTML=`<tr><th>${ts('الصنف','Item')}</th><th>${ts('الرصيد','On hand')}</th><th>${ts('حد إعادة الطلب','Reorder at')}</th><th>${ts('تكلفة الوحدة','Unit cost')}</th><th>${ts('قيمة الرصيد','Value')}</th><th>${ts('الحالة','Status')}</th><th>${ts('إجراء','Action')}</th></tr>`;
+  const lbl={ok:ts('متوفر','In stock'),low:ts('قارب على النفاد','Running low'),out:ts('نفد','Out of stock')};
   const order={out:0,low:1,ok:2};
   $("#stkRows").innerHTML=items.slice().sort((a,b)=>order[stkState(a)]-order[stkState(b)]||a.item.localeCompare(b.item,'ar')).map(s=>{ const q=nnum(s.qty), m=nnum(s.min_qty), st=stkState(s); const w=m>0?Math.min(100,Math.round(q/(m*3)*100)):100;
-    return `<tr><td><b>${escHtml(s.item)}</b></td><td><div class="stk-qty"><b>${q} ${escHtml(s.unit||'')}</b><div class="progress"><b class="${st==='ok'?'':'danger'}" style="width:${Math.max(w,q>0?4:0)}%"></b></div></div></td><td>${m}</td><td>${money(nnum(s.unit_cost))}</td><td>${money(Math.max(q,0)*nnum(s.unit_cost))}</td><td><span class="stk-badge ${st}">${lbl[st]}</span></td><td><div class="stk-acts"><button type="button" class="btn good" data-stk-in="${escHtml(s.item)}">${ts('توريد','Receive')}</button><button type="button" class="btn ghost" data-stk-out="${escHtml(s.item)}">${ts('صرف','Issue')}</button><button type="button" class="btn ghost" data-stk-edit="${escHtml(s.item)}">${ts('تعديل','Edit')}</button></div></td></tr>`; }).join('')||`<tr><td colspan="7" class="empty">${ts('مفيش أصناف لسه','No items yet')}</td></tr>`;
-  $("#stkCostHead").innerHTML=`<tr><th>${ts('الخدمة','Service')}</th><th>${ts('السعر','Price')}</th><th>${ts('تكلفة المستلزمات','Supplies cost')}</th><th>${ts('الهامش','Margin')}</th><th>%</th><th>${ts('المكوّنات لكل حالة','Used per case')}</th></tr>`;
+    return `<tr><td><b>${escHtml(s.item)}</b></td><td><div class="stk-qty"><b>${q} ${escHtml(s.unit||'')}</b><div class="progress"><b class="${st==='ok'?'':'danger'}" style="width:${Math.max(w,q>0?4:0)}%"></b></div></div></td><td>${m}</td><td>${money(nnum(s.unit_cost))}</td><td>${money(Math.max(q,0)*nnum(s.unit_cost))}</td><td><span class="stk-badge ${st}">${lbl[st]}</span></td><td><div class="stk-acts"><button type="button" class="btn good" data-stk-in="${escHtml(s.item)}">${ts('توريد','Receive')}</button><button type="button" class="btn ghost" data-stk-out="${escHtml(s.item)}">${ts('صرف','Use')}</button><button type="button" class="btn ghost" data-stk-edit="${escHtml(s.item)}">${ts('تعديل','Edit')}</button></div></td></tr>`; }).join('')||`<tr><td colspan="7" class="empty">${ts('مفيش أصناف لسه','No items yet')}</td></tr>`;
+  $("#stkCostHead").innerHTML=`<tr><th>${ts('الخدمة','Service')}</th><th>${ts('السعر','Price')}</th><th>${ts('تكلفة المستلزمات','Supplies cost')}</th><th>${ts('الهامش','Margin')}</th><th>%</th><th>${ts('المستلزمات لكل حالة','Supplies per case')}</th></tr>`;
   $("#stkCost").innerHTML=D.services.map(sv=>{ const price=nnum(sv.price); const rc=recipeCostOf(sv.service); const cost=rc===null?nnum(sv.materials):rc; const mg=price-cost;
     return `<tr><td><b>${escHtml(sv.service)}</b></td><td>${money(price)}</td><td>${money(cost)}</td><td><b>${money(mg)}</b></td><td>${price?pct(mg,price):0}%</td><td>${recipeOf(sv.service).map(r=>`<span class="stk-chip">${nnum(r.qty)}× ${escHtml(r.item)}</span>`).join('')||'<span class="stk-chip">'+ts('بدون مستلزمات','No supplies')+'</span>'}</td></tr>`; }).join('');
-  $("#stkCostNote").textContent=ts('التكلفة = كمية كل صنف في الخدمة × تكلفة الوحدة الحالية. الأصناف دي بتتخصم من المخزون تلقائيًا أول ما الحضور يتأكد، وبترجع لو الحضور اتلغى.','Cost = quantity of each item per case × current unit cost. Items are deducted automatically when attendance is confirmed, and returned if it is undone.');
-  $("#stkMovesHead").innerHTML=`<tr><th>${ts('الوقت','Time')}</th><th>${ts('الصنف','Item')}</th><th>${ts('الحركة','Change')}</th><th>${ts('الرصيد بعدها','Balance')}</th><th>${ts('السبب','Reason')}</th><th>${ts('بواسطة','By')}</th></tr>`;
-  $("#stkMoves").innerHTML=D.stock_moves.slice().reverse().slice(0,40).map(m=>{ const c=nnum(m.change); return `<tr><td dir="ltr" style="text-align:start">${escHtml(m.time)}</td><td>${escHtml(m.item)}</td><td><span class="${c>0?'stk-plus':'stk-minus'}" dir="ltr">${c>0?'+':''}${c}</span></td><td>${escHtml(m.balance)}</td><td>${escHtml(m.reason)}</td><td>${escHtml(m.actor)}</td></tr>`; }).join('')||`<tr><td colspan="6" class="empty">${ts('لسه مفيش حركة','No movements yet')}</td></tr>`;
+  $("#stkCostNote").textContent=ts('التكلفة = كمية كل صنف في الخدمة × تكلفة الوحدة الحالية. الأصناف دي بتتخصم من الرصيد تلقائيًا أول ما الحضور يتأكد، وبترجع لو الحضور اتلغى.','Cost = quantity of each item per case × current unit cost. Items are deducted automatically when attendance is confirmed, and returned if it is undone.');
+  $("#stkMovesHead").innerHTML=`<tr><th>${ts('الوقت','Time')}</th><th>${ts('الصنف','Item')}</th><th>${ts('الحركة','Movement')}</th><th>${ts('الرصيد بعدها','Balance')}</th><th>${ts('السبب','Reason')}</th><th>${ts('بواسطة','By')}</th></tr>`;
+  $("#stkMoves").innerHTML=D.stock_moves.slice().reverse().slice(0,40).map(m=>{ const c=nnum(m.change); return `<tr><td dir="ltr" style="text-align:start">${escHtml(m.time)}</td><td>${escHtml(m.item)}</td><td><span class="${c>0?'stk-plus':'stk-minus'}" dir="ltr">${c>0?'+':''}${c}</span></td><td>${escHtml(m.balance)}</td><td>${escHtml(m.reason)}</td><td>${escHtml(m.actor)}</td></tr>`; }).join('')||`<tr><td colspan="6" class="empty">${ts('مفيش حركة لسه','No movements yet')}</td></tr>`;
 }
 function stkForm(title,fields,onSubmit){
   openModal(title,`<form id="stkForm"><div class="fgrid">${fields}</div><div class="login-error" id="stkError" hidden></div><button type="submit" class="btn primary auth-submit" id="stkSave"><svg><use href="#i-check"/></svg><span>${ts('حفظ','Save')}</span></button></form>`);
   $("#stkForm").addEventListener('submit',async e=>{ e.preventDefault(); const err=$("#stkError"); err.hidden=true; $("#stkSave").disabled=true;
-    try{ const d=await onSubmit(); if(d.ok){ closeModal(); toast(ts('اتحفظ','Saved')); await loadData(false); } else { err.hidden=false; err.textContent=d.error==='invalid_fields'?ts('راجع البيانات: الكمية والسبب مطلوبين','Check the fields: quantity and reason are required'):errText(d); } }
+    try{ const d=await onSubmit(); if(d.ok){ closeModal(); toast(ts('تم الحفظ','Saved')); await loadData(false); } else { err.hidden=false; err.textContent=d.error==='invalid_fields'?ts('الكمية والسبب مطلوبين','Quantity and reason are required'):errText(d); } }
     catch(ex){ if(ex.message!=='unauthorized'){ err.hidden=false; err.textContent=t('toastActionFailed'); } }
     const b=$("#stkSave"); if(b) b.disabled=false; });
 }
 function openStockMove(item,dir){ const s=D.stock.find(x=>x.item===item); if(!s) return;
-  stkForm((dir>0?ts('توريد','Receive')+' — ':ts('صرف','Issue')+' — ')+item,`<div class="fld"><label>${ts('الكمية','Quantity')} (${escHtml(s.unit||'')})</label><input id="stkQty" type="number" inputmode="numeric" min="1" max="100000" step="1" required></div>
+  stkForm((dir>0?ts('توريد','Receive')+' — ':ts('صرف','Use')+' — ')+item,`<div class="fld"><label>${ts('الكمية','Quantity')} (${escHtml(s.unit||'')})</label><input id="stkQty" type="number" inputmode="numeric" min="1" max="100000" step="1" required></div>
     ${dir>0?`<div class="fld"><label>${ts('تكلفة الوحدة (ج)','Unit cost (EGP)')}</label><input id="stkCostIn" type="number" inputmode="decimal" min="0" step="1" value="${nnum(s.unit_cost)}"></div>`:''}
     <div class="fld"><label>${ts('السبب','Reason')}</label><input id="stkReason" required maxlength="80" value="${dir>0?ts('توريد من المورد','Supplier delivery'):''}" placeholder="${dir>0?'':ts('مثال: تالف، منتهي الصلاحية','e.g. damaged, expired')}"></div>
     <div class="fld"><label>${ts('الرصيد الحالي','Current balance')}</label><input value="${nnum(s.qty)} ${escHtml(s.unit||'')}" disabled></div>`,
@@ -3147,7 +3150,7 @@ function openStockItem(item){ const s=item?D.stock.find(x=>x.item===item):null;
   stkForm(s?ts('تعديل صنف','Edit item'):ts('صنف جديد','New item'),`<div class="fld"><label>${ts('اسم الصنف','Item name')}</label><input id="stkName" required maxlength="60" value="${escHtml(s?s.item:'')}" ${s?'disabled':''}></div>
     <div class="fld"><label>${ts('الوحدة','Unit')}</label><input id="stkUnit" maxlength="20" value="${escHtml(s?s.unit:ts('قطعة','piece'))}"></div>
     ${s?'':`<div class="fld"><label>${ts('الرصيد الافتتاحي','Opening balance')}</label><input id="stkOpen" type="number" inputmode="numeric" min="0" step="1" value="0"></div>`}
-    <div class="fld"><label>${ts('الحد الأدنى للتنبيه','Reorder level')}</label><input id="stkMin" type="number" inputmode="numeric" min="0" step="1" required value="${s?nnum(s.min_qty):1}"></div>
+    <div class="fld"><label>${ts('حد إعادة الطلب','Reorder level')}</label><input id="stkMin" type="number" inputmode="numeric" min="0" step="1" required value="${s?nnum(s.min_qty):1}"></div>
     <div class="fld"><label>${ts('تكلفة الوحدة (ج)','Unit cost (EGP)')}</label><input id="stkUc" type="number" inputmode="decimal" min="0" step="1" required value="${s?nnum(s.unit_cost):''}"></div>`,
     ()=>{ const p={item:s?s.item:$("#stkName").value.trim(),unit:$("#stkUnit").value.trim(),min_qty:$("#stkMin").value,unit_cost:$("#stkUc").value}; if(!s) p.qty=$("#stkOpen").value||'0'; return act('stock_save',p); });
 }
@@ -3199,7 +3202,7 @@ function renderFinance(){
   const payItems=Object.keys(payMap).map(k=>({name:k,count:payMap[k]})).sort((a,b)=>b.count-a.count);
   $("#finPay").innerHTML=bars(payItems,'var(--blue-light)');
   $("#finServices").innerHTML=bars(byKey('service'),'var(--blue)');
-  $("#finDoctors").innerHTML=bars(byKey('doctor'),'var(--pink)');
+  $("#finDoctors").innerHTML=bars(byKey('doctor'),'var(--pink)'); $("#finDoctors").closest(".card").style.display=D.doctors.length<2?"none":"";
   requestAnimationFrame(()=>document.querySelectorAll("#finBranches .progress b,#finServices .channel-bar b,#finDoctors .channel-bar b,#finPay .channel-bar b").forEach(b=>b.style.width=b.dataset.w+"%"));
 }
 
@@ -3323,7 +3326,7 @@ function showSection(id){
 }
 function renderAll(){
   renderKpis(); renderHome(); renderAppointments(); renderLeads(); renderDoctors(); renderBranches(); renderPatients(); renderFinance(); renderStock(); renderReports(); renderActivity(); renderUsers(); renderNotifications(); renderAgenda(); renderQf();
-  const u=D.user||getUser(); if($("#roleChip")&&u) $("#roleChip").textContent=u.role||'—';
+  const u=D.user||getUser(); if($("#roleChip")&&u) $("#roleChip").textContent=u.role==='admin'?(LANG==='ar'?'مدير':'Admin'):u.role?t('uStaff'):'—';
 }
 function openDrawer(){ $(".sidebar").classList.add("open"); $("#drawerBackdrop").classList.add("show"); }
 function closeDrawer(){ $(".sidebar").classList.remove("open"); $("#drawerBackdrop").classList.remove("show"); }
@@ -3971,7 +3974,7 @@ if(getToken()) showApp(); else showLogin();
   function unwrap(el){ var w=el.parentNode; if(w&&w.classList.contains('sw-wrap')){ w.parentNode.insertBefore(el,w); w.remove(); } el.style.transform=''; }
   function paint(){ if(!g) return; g.el.style.transform='translate3d('+g.x+'px,0,0)';
     var right=g.x>0, ok=right?g.attend:true; g.under.className='sw-under '+(right?'attend':'edit')+(ok?'':' off')+(ok&&Math.abs(g.x)>=COMMIT?' armed':'');
-    g.under.textContent=right?(ok?(LANG==='ar'?'تأكيد الحضور':'Confirm attendance'):(LANG==='ar'?'مش متاح':'Not available')):(LANG==='ar'?'تعديل الحجز':'Edit booking');
+    g.under.textContent=right?(ok?(LANG==='ar'?'تأكيد الحضور':'Confirm attendance'):(LANG==='ar'?'غير متاح':'Not available')):(LANG==='ar'?'تعديل الحجز':'Edit booking');
     var armed=ok&&Math.abs(g.x)>=COMMIT; if(armed&&!g.armed&&navigator.vibrate) try{ navigator.vibrate(8); }catch(_){ } g.armed=armed; }
   function settle(el,from,vel,done){ var x=from, v=vel, k=Math.pow(2*Math.PI/0.32,2), c=2*Math.sqrt(k), last=performance.now(); cancelAnimationFrame(raf);
     var guard=setTimeout(function(){ cancelAnimationFrame(raf); done(); },700);
