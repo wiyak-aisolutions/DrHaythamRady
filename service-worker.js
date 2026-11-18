@@ -1,4 +1,4 @@
-const CACHE_NAME = "drh-dashboard-v1";
+const CACHE_NAME = "drh-dashboard-v3";
 const SHELL_ASSETS = [
   "./",
   "./index.html",

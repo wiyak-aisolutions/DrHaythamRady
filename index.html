@@ -13,7 +13,7 @@
   }catch(e){}
 })();
 </script>
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" id="themeColorMeta" content="#E4EDF7">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1725,6 +1725,16 @@ tr.rs-grey{opacity:.62}
 .tday{grid-template-columns:minmax(0,1fr)}.td-item{min-width:0}.td-item .chip{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .td-group.late{color:var(--warning-ink)}.td-group{font-size:11px;font-weight:700;color:var(--muted);padding:6px 4px 0}.td-item .chip{flex:none}.td-item .badge{flex:none}
 .td-now{font-size:10px;font-weight:700;color:var(--blue-ink);background:var(--panel);border-radius:999px;padding:2px 8px;margin-inline-start:6px}
+/* stock */
+.stk-qty{display:flex;align-items:center;gap:10px;min-width:150px}.stk-qty b{min-width:52px}.stk-qty .progress{flex:1}
+.stk-acts{display:flex;gap:6px;flex-wrap:wrap}.stk-acts .btn{min-height:36px;padding:0 12px;font-size:12px}
+.stk-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.stk-badge.ok{background:rgba(52,211,153,.16);color:#0E8A5B}.stk-badge.low{background:rgba(244,183,64,.2);color:#9A6500}.stk-badge.out{background:rgba(248,113,113,.18);color:#C0392B}
+html[data-theme="dark"] .stk-badge.ok{color:#6EE7B7}html[data-theme="dark"] .stk-badge.low{color:#FCD34D}html[data-theme="dark"] .stk-badge.out{color:#FCA5A5}
+.stk-chip{display:inline-block;margin:2px;padding:2px 9px;border-radius:999px;font-size:11px;background:var(--panel-2);border:1px solid var(--line-soft);color:var(--muted);white-space:nowrap}
+.stk-plus{color:#0E8A5B;font-weight:700}.stk-minus{color:#C0392B;font-weight:700}html[data-theme="dark"] .stk-plus{color:#6EE7B7}html[data-theme="dark"] .stk-minus{color:#FCA5A5}
+@media (max-width:760px){.fin-kpis{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.stk-table td:last-child{grid-column:1/-1}.stk-acts{flex-wrap:nowrap}.stk-acts .btn{flex:1;min-height:42px}}
 /* finance */
 .fin-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .fin-kpi{background:var(--panel-2);border-radius:14px;padding:14px 16px;border:1px solid var(--line-soft)}
@@ -2005,7 +2015,7 @@ html[data-theme] .table tbody tr:hover{background:var(--blue-soft)!important}
 @media (max-width:860px){html[data-theme] .table tbody tr,html[data-theme] .table tbody tr:hover{background:var(--panel-2)!important;border-color:var(--line)!important;box-shadow:var(--glass-hi)!important}}
 
 /* ---------- login + splash ---------- */
-html[data-theme] .login-screen{background:var(--bg)!important;overflow:hidden}
+html[data-theme] .login-screen{background:var(--bg)!important;overflow-x:hidden;overflow-y:auto}
 html[data-theme] .login-card{background:linear-gradient(145deg,var(--glass),var(--glass-2))!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--glass-line)!important;box-shadow:var(--glass-hi),var(--glass-sh)!important}
 html[data-theme="dark"] .splash{background:radial-gradient(700px 480px at 50% 35%,#17365D,#0A0B0D 70%)!important}
 html[data-theme] .toast{background:color-mix(in srgb,var(--panel) 85%,transparent)!important;color:var(--ink)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--glass-line);box-shadow:var(--glass-sh)}
@@ -2041,6 +2051,28 @@ html[data-theme] .toast{background:color-mix(in srgb,var(--panel) 85%,transparen
   .section.gl-out{animation:none}
   .gl-glide{transition:none}
 }
+</style>
+<style id="drh-liquid">
+/* ===== liquid glass pass: no zoom, thicker glass, bright rims, soft colour behind the glass ===== */
+html{touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html[data-theme]{--blur:blur(30px) saturate(190%);--rim:linear-gradient(155deg,rgba(255,255,255,.98),rgba(255,255,255,.28) 40%,rgba(48,162,221,.42))}
+html[data-theme="dark"]{--rim:linear-gradient(155deg,rgba(255,255,255,.26),rgba(255,255,255,.04) 42%,rgba(77,181,232,.38))}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(46vw 46vw at 88% 4%,rgba(48,162,221,.36),transparent 62%),
+  radial-gradient(52vw 52vw at 4% 92%,rgba(11,92,184,.30),transparent 64%),
+  radial-gradient(34vw 34vw at 52% 48%,rgba(125,184,236,.22),transparent 62%)}
+html[data-theme="dark"] body::before{background:
+  radial-gradient(46vw 46vw at 88% 4%,rgba(48,162,221,.22),transparent 62%),
+  radial-gradient(52vw 52vw at 4% 92%,rgba(11,92,184,.30),transparent 64%),
+  radial-gradient(34vw 34vw at 52% 48%,rgba(26,115,217,.12),transparent 62%)}
+html[data-theme] .card:not(.kpi),html[data-theme] .filters,html[data-theme] .modal-box,html[data-theme] .login-card{border:1px solid transparent!important;
+  background:linear-gradient(150deg,var(--glass),var(--glass-2)) padding-box,var(--rim) border-box!important;
+  -webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+html[data-theme] .m-bottomnav{border:1px solid transparent!important;background:linear-gradient(var(--glass),var(--glass-2)) padding-box,var(--rim) border-box!important;-webkit-backdrop-filter:blur(28px) saturate(190%)!important;backdrop-filter:blur(28px) saturate(190%)!important}
+html[data-theme] .m-topbar{-webkit-backdrop-filter:blur(30px) saturate(190%)!important;backdrop-filter:blur(30px) saturate(190%)!important}
+html[data-theme] .fin-kpi:not(.hl){background:linear-gradient(150deg,var(--glass),var(--glass-2))!important;border:1px solid var(--glass-line)!important;box-shadow:var(--glass-hi)}
+html[data-theme] .card:not(.kpi):hover{transform:none}
+html[data-theme] input,html[data-theme] select,html[data-theme] textarea{font-size:16px}
 </style>
 </head>
 <body>
@@ -2177,6 +2209,7 @@ html[data-theme] .toast{background:color-mix(in srgb,var(--panel) 85%,transparen
     <button data-section="patients"><svg><use href="#i-users"/></svg><span data-i18n="navPatients">المرضى</span></button>
     <div class="nav-group-label" data-i18n="kickerInsights">التحليلات</div>
     <button data-section="finance"><svg><use href="#i-wallet"/></svg><span data-i18n="navFinance">الحسابات</span></button>
+    <button data-section="stock"><svg><use href="#i-box"/></svg><span data-i18n="navStock">المخزون</span><span class="nav-dot warn" id="navStockDot" hidden></span></button>
     <button data-section="reports"><svg><use href="#i-chart"/></svg><span data-i18n="navReports">التقارير</span></button>
     <button data-section="activity"><svg><use href="#i-history"/></svg><span data-i18n="navActivity">سجل النشاط</span></button>
     <button data-section="opstatus"><svg><use href="#i-check"/></svg><span data-i18n="navStatus">حالة التشغيل</span><span class="nav-dot warn" id="navStatusDot"></span></button>
@@ -2310,6 +2343,13 @@ html[data-theme] .toast{background:color-mix(in srgb,var(--panel) 85%,transparen
 <div class="bottom-grid"><div class="card"><div class="card-head"><h2 data-i18n="revByService">الدخل حسب الخدمة</h2></div><div class="card-body" id="finServices"></div></div><div class="card"><div class="card-head"><h2 data-i18n="revByDoctor">الدخل حسب الدكتور</h2></div><div class="card-body" id="finDoctors"></div></div><div class="card"><div class="card-head"><h2 data-i18n="finByPayment">الدخل حسب طريقة الدفع</h2></div><div class="card-body" id="finPay"></div></div></div>
 </section>
 
+<section id="stock" class="section" hidden>
+<div class="card" style="margin-bottom:16px"><div class="card-head"><h2 id="stkSumTitle"></h2></div><div class="card-body"><div class="fin-kpis" id="stkKpis"></div></div></div>
+<div class="card" style="margin-bottom:16px"><div class="card-head"><h2 id="stkItemsTitle"></h2><button type="button" class="btn primary" id="stkNew"><svg><use href="#i-plus"/></svg><span id="stkNewLbl"></span></button></div><div class="table-wrap"><table class="table stk-table"><thead id="stkHead"></thead><tbody id="stkRows"></tbody></table></div></div>
+<div class="card" style="margin-bottom:16px"><div class="card-head"><h2 id="stkCostTitle"></h2></div><div class="table-wrap"><table class="table"><thead id="stkCostHead"></thead><tbody id="stkCost"></tbody></table></div><div class="card-body"><div class="fin-note" id="stkCostNote"></div></div></div>
+<div class="card"><div class="card-head"><h2 id="stkMovesTitle"></h2></div><div class="table-wrap"><table class="table"><thead id="stkMovesHead"></thead><tbody id="stkMoves"></tbody></table></div></div>
+</section>
+
 <section id="reports" class="section" hidden>
 <div class="bottom-grid">
   <div class="card"><div class="card-head"><h2 data-i18n="funnelTitle">رحلة الليد</h2></div><div class="card-body" id="repFunnel"></div></div>
@@ -2432,7 +2472,7 @@ const I18N = {
   bookingN:"حجز", leadN:"استفسار", patientLbl:"المريض", phoneLbl:"الهاتف", serviceLbl:"الخدمة", branchLbl:"الفرع", doctorLbl:"الدكتور", dateLbl:"التاريخ", timeLbl:"الساعة", sourceLbl:"المصدر", statusLbl:"الحالة", createdLbl:"اتسجل", campaignLbl:"الحملة", agentLbl:"الموظف", entryLbl:"وقت الدخول", updatedLbl:"آخر تحديث", lossLbl:"سبب الضياع", linkedBooking:"الحجز المرتبط",
   bookNow:"احجز له", saveAgent:"حفظ الموظف", agentPlaceholder:"اسم الموظف المسؤول", call:"اتصال", whatsapp:"واتساب",
   newBookingTitle:"حجز جديد", fieldPatient:"اسم المريض", fieldPhone:"رقم الموبايل", fieldService:"الخدمة", fieldBranch:"الفرع", fieldDate:"التاريخ", fieldDoctor:"الدكتور", anyDoctor:"أي دكتور متاح", fieldSlot:"المواعيد المتاحة", fieldSource:"مصدر الحجز", chooseService:"اختار الخدمة", chooseBranch:"اختار الفرع", saveBooking:"تأكيد الحجز", pickSlotHint:"اختار الخدمة والفرع وهتظهرلك الأيام والدكاترة المتاحين", noSlots:"مفيش مواعيد متاحة في اليوم ده — جرّب يوم تاني", fillAll:"كمّل كل البيانات واختار ميعاد",
-  srcCall:"تليفون", srcWhats:"واتساب", srcAd:"إعلان", srcSite:"الموقع", srcWalk:"زيارة",
+  srcCall:"تليفون", srcIg:"إنستجرام", srcFb:"فيسبوك", srcTt:"تيك توك", srcVz:"Vezeeta", srcWhats:"واتساب", srcAd:"إعلان", srcSite:"الموقع", srcWalk:"زيارة",
   toastBookingSaved:"تم تسجيل الحجز", toastUpdated:"تم التحديث", toastDataRefreshed:"تم تحديث البيانات", toastCantConnect:"تعذر الاتصال بالسيرفر", toastActionFailed:"تعذر تنفيذ العملية، حاول تاني", toastSlotTaken:"الميعاد اتحجز — اختار ميعاد تاني", toastDuplicate:"المريض عنده حجز بنفس الخدمة في نفس اليوم", toastFiltersCleared:"تم مسح الفلاتر", newBookingToast:"حجز جديد", newLeadToast:"استفسار جديد",
   docSpecialty:"التخصص", docBranches:"الفروع", docServices:"الخدمات", docToday:"حجوزات اليوم", docNext:"الموعد القادم", docLoad:"ضغط اليوم", docSchedule:"الجدول الأسبوعي", docUpcoming:"المواعيد القادمة", noUpcoming:"مفيش مواعيد قادمة", noSchedToday:"إجازة اليوم", dayOff:"إجازة",
   days:["الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"],
@@ -2447,7 +2487,7 @@ const I18N = {
   accountPending:"حسابك لسه في انتظار موافقة الإدارة", signupFailed:"تعذر إنشاء الحساب", accountDisabled:"الحساب ده موقوف — كلّم الإدارة",
   emailTaken:"الإيميل ده مسجل قبل كده — سجّل دخول بدل ما تعمل حساب جديد", invalidEmail:"البريد الإلكتروني مش صحيح", invalidName:"اكتب اسمك (80 حرف كحد أقصى)",
   greetMorning:"صباح الخير", greetEvening:"مساء الخير", noNotifs:"مفيش تنبيهات جديدة", markRead:"تعليم الكل كمقروء", currency:"ج", payCash:"كاش", attendTitle:"تأكيد الحضور والدفع", amountPaid:"المبلغ المدفوع", paymentMethod:"طريقة الدفع", payPickHint:"اختار طريقة الدفع", confirmAttend:"تأكيد الحضور والدفع", editAmount:"تعديل المبلغ", saveAmount:"حفظ التعديل", confirmedByLbl:"أكّد بواسطة", toastAttended:"تم تأكيد الحضور والدفع", toastAmountSaved:"تم تحديث المبلغ", needAttendPerm:"محتاج صلاحية تأكيد الحضور", qfBookedPending:"حجزوا ولسه ما حضروش", qfAttended:"حضروا", colBooking:"الحجز", finByPayment:"الدخل حسب طريقة الدفع", noPayment:"غير محدد", defaultAmountNote:"المبلغ متعبّي بسعر الخدمة الافتراضي — عدّله لو اتحاسب بمبلغ مختلف (زيادة خدمة مثلًا).", qfAll:"الكل", qfToday:"النهارده", qfPending:"بانتظار التأكيد", qfLate:"فاتت ومحتاجة تحديث", qfUpcoming:"مؤكدة قادمة", qfNoShow:"لم يحضروا", qfCancelled:"ملغية", qfNew:"جديدة", qfStale:"متأخرة +ساعتين", qfNoAgent:"بدون موظف", qfFollow:"تحتاج متابعة (+يوم)", qfLost:"ضايعة", back:"رجوع", phAppointments:"ابحث باسم المريض أو الهاتف أو رقم الحجز...", phLeads:"ابحث باسم العميل أو الهاتف أو الحملة...", phDoctors:"ابحث باسم الدكتور أو التخصص أو الخدمة...", phPatients:"ابحث باسم المريض أو رقم الهاتف...", pickDay:"اختار اليوم", pickDoctor:"اختار الدكتور", tomorrowWord:"بكرة", slotsCount:"مواعيد", firstAt:"أول ميعاد", otherDate:"تاريخ تاني:", noAvailAny:"مفيش مواعيد متاحة في الـ 3 أسابيع الجاية للخدمة والفرع دول — جرّب فرع تاني", pickDoctorHint:"اختار الدكتور عشان تظهر مواعيده", toastForbidden:"مفيش عندك صلاحية للعملية دي", upcomingGroup:"القادمة", doneGroup:"خلصت", lateGroup:"فاتت وتحتاج تحديث الحالة",
-  navFinance:"الحسابات", titleFinance:"الحسابات", subFinance:"الدخل ونسبة الإشغال لكل فرع",
+  navStock:"المخزون", titleStock:"المخزون والتكلفة", subStock:"رصيد المستلزمات وتكلفة كل خدمة", navFinance:"الحسابات", titleFinance:"الحسابات", subFinance:"الدخل ونسبة الإشغال لكل فرع",
   finTitle:"ملخص الحسابات", finToday:"اليوم", finWeek:"الأسبوع", finMonth:"الشهر", finAll:"الكل", finBranchTitle:"الدخل والإشغال لكل فرع", revByService:"الدخل حسب الخدمة", revByDoctor:"الدخل حسب الدكتور",
   finCollected:"المحصّل (حضروا)", finExpected:"المتوقع (مؤكد وبانتظار)", finAvg:"متوسط قيمة الزيارة", finOccupancy:"نسبة الإشغال", finOccSub:"ساعات محجوزة من ساعات العمل", finVisits:"زيارة", finRange:"الفترة", finNote:"الأسعار الافتراضية من قائمة الخدمات، والمبلغ الفعلي هو اللي بيتسجّل عند تأكيد الحضور.", finTotal:"الإجمالي",
   waReminder:"تذكير واتساب", remSent:"اتبعت — مستني رد", remConfirmed:"المريض أكّد ✅", remCancelled:"المريض لغى من واتساب", fbLbl:"تقييم المريض", fb3:"ممتاز 😊", fb2:"كويس 🙂", fb1:"محتاج تحسين 😕",
@@ -2502,7 +2542,7 @@ const I18N = {
   bookingN:"booking", leadN:"lead", patientLbl:"Patient", phoneLbl:"Phone", serviceLbl:"Service", branchLbl:"Branch", doctorLbl:"Doctor", dateLbl:"Date", timeLbl:"Time", sourceLbl:"Source", statusLbl:"Status", createdLbl:"Created", campaignLbl:"Campaign", agentLbl:"Agent", entryLbl:"Entered", updatedLbl:"Last update", lossLbl:"Loss reason", linkedBooking:"Linked booking",
   bookNow:"Book appointment", saveAgent:"Save agent", agentPlaceholder:"Responsible agent", call:"Call", whatsapp:"WhatsApp",
   newBookingTitle:"New booking", fieldPatient:"Patient name", fieldPhone:"Mobile number", fieldService:"Service", fieldBranch:"Branch", fieldDate:"Date", fieldDoctor:"Doctor", anyDoctor:"Any available doctor", fieldSlot:"Available times", fieldSource:"Booking source", chooseService:"Choose a service", chooseBranch:"Choose a branch", saveBooking:"Confirm booking", pickSlotHint:"Choose a service and branch to see available days and doctors", noSlots:"No slots available that day — try another day", fillAll:"Complete all fields and pick a time",
-  srcCall:"Call center", srcWhats:"WhatsApp", srcAd:"Ad", srcSite:"Website", srcWalk:"Walk-in",
+  srcCall:"Phone", srcIg:"Instagram", srcFb:"Facebook", srcTt:"TikTok", srcVz:"Vezeeta", srcWhats:"WhatsApp", srcAd:"Ad", srcSite:"Website", srcWalk:"Walk-in",
   toastBookingSaved:"Booking saved", toastUpdated:"Updated", toastDataRefreshed:"Data refreshed", toastCantConnect:"Couldn't reach the server", toastActionFailed:"Couldn't complete the action, please try again", toastSlotTaken:"That slot was just taken — pick another", toastDuplicate:"This patient already has the same service booked that day", toastFiltersCleared:"Filters cleared", newBookingToast:"New booking", newLeadToast:"New lead",
   docSpecialty:"Specialty", docBranches:"Branches", docServices:"Services", docToday:"Bookings today", docNext:"Next appointment", docLoad:"Today's load", docSchedule:"Weekly schedule", docUpcoming:"Upcoming appointments", noUpcoming:"No upcoming appointments", noSchedToday:"Off today", dayOff:"Off",
   days:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
@@ -2517,7 +2557,7 @@ const I18N = {
   accountPending:"Your account is still waiting for admin approval", signupFailed:"Couldn't create the account", accountDisabled:"This account is disabled — contact the admin",
   emailTaken:"This email is already registered — sign in instead", invalidEmail:"That email address isn't valid", invalidName:"Enter your name (80 characters max)",
   greetMorning:"Good morning", greetEvening:"Good evening", noNotifs:"No new notifications", markRead:"Mark all as read", currency:"EGP", payCash:"Cash", attendTitle:"Confirm attendance & payment", amountPaid:"Amount paid", paymentMethod:"Payment method", payPickHint:"Choose a payment method", confirmAttend:"Confirm attendance & payment", editAmount:"Edit amount", saveAmount:"Save changes", confirmedByLbl:"Confirmed by", toastAttended:"Attendance and payment confirmed", toastAmountSaved:"Amount updated", needAttendPerm:"Needs the attendance permission", qfBookedPending:"Booked, not attended yet", qfAttended:"Attended", colBooking:"Booking", finByPayment:"Revenue by payment method", noPayment:"Unspecified", defaultAmountNote:"Pre-filled with the default service price — change it if the bill is different (extra service, for example).", qfAll:"All", qfToday:"Today", qfPending:"Awaiting confirmation", qfLate:"Past time — update", qfUpcoming:"Confirmed upcoming", qfNoShow:"No-shows", qfCancelled:"Cancelled", qfNew:"New", qfStale:"Overdue 2h+", qfNoAgent:"No agent", qfFollow:"Needs follow-up (1d+)", qfLost:"Lost", back:"Back", phAppointments:"Search patient, phone or booking ID...", phLeads:"Search customer, phone or campaign...", phDoctors:"Search doctor, specialty or service...", phPatients:"Search patient name or phone...", pickDay:"Pick a day", pickDoctor:"Pick a doctor", tomorrowWord:"Tomorrow", slotsCount:"slots", firstAt:"first at", otherDate:"Other date:", noAvailAny:"No availability in the next 3 weeks for this service and branch — try another branch", pickDoctorHint:"Pick a doctor to see their times", toastForbidden:"You do not have permission for this action", upcomingGroup:"Upcoming", doneGroup:"Finished", lateGroup:"Past time — update status",
-  navFinance:"Accounts", titleFinance:"Accounts", subFinance:"Revenue and occupancy per branch",
+  navStock:"Stock", titleStock:"Stock & cost", subStock:"Supplies on hand and cost per service", navFinance:"Accounts", titleFinance:"Accounts", subFinance:"Revenue and occupancy per branch",
   finTitle:"Accounts summary", finToday:"Today", finWeek:"Week", finMonth:"Month", finAll:"All", finBranchTitle:"Revenue and occupancy per branch", revByService:"Revenue by service", revByDoctor:"Revenue by doctor",
   finCollected:"Collected (attended)", finExpected:"Expected (confirmed & pending)", finAvg:"Average visit value", finOccupancy:"Occupancy", finOccSub:"booked hours of working hours", finVisits:"visits", finRange:"Period", finNote:"Default prices come from the service list; the actual amount is the one recorded when attendance is confirmed.", finTotal:"Total",
   waReminder:"WhatsApp reminder", remSent:"Sent — awaiting reply", remConfirmed:"Patient confirmed ✅", remCancelled:"Patient cancelled on WhatsApp", fbLbl:"Patient feedback", fb3:"Excellent 😊", fb2:"Good 🙂", fb1:"Needs improvement 😕",
@@ -2568,9 +2608,9 @@ function listSplit(s){ return String(s||'').split(/[،,]/).map(x=>x.trim()).filt
 function avatar(name){ return escHtml(String(name||'?').replace(/^د\.?\s*/,'').trim().charAt(0)||'؟'); }
 
 /* ========================= data ========================= */
-let D={now:'',bookings:[],leads:[],branches:[],services:[],doctors:[],schedule:[],activity:[]};
+let D={now:'',bookings:[],leads:[],branches:[],services:[],doctors:[],schedule:[],activity:[],stock:[],recipes:[],stock_moves:[]};
 function P(){ return (D.user&&D.user.perms)||{}; }
-function can(sec){ if(sec==='users') return !!P().admin; return (sec==='home'||sec==='opstatus') ? true : !!P()[sec]; }
+function can(sec){ if(sec==='users') return !!P().admin; if(sec==='stock') return !!P().finance; return (sec==='home'||sec==='opstatus') ? true : !!P()[sec]; }
 function applyPerms(){
   const p=P();
   document.querySelectorAll('#nav button[data-section],#mBottomNav button[data-section]').forEach(b=>{ b.hidden=!can(b.dataset.section); });
@@ -2602,7 +2642,7 @@ const LS={
 };
 const LS_ORDER=['جديد','تم الاتصال','تم الحجز','ضايع'];
 const LOSS_REASONS=['السعر عالي','مش بيرد','بعيد عن الفروع','حجز عند دكتور تاني','مش مهتم','رقم غلط','أخرى'];
-const SOURCES_BOOK=[['كول سنتر','srcCall'],['واتساب','srcWhats'],['إعلان','srcAd'],['الموقع','srcSite'],['زيارة','srcWalk']];
+const SOURCES_BOOK=[['تليفون','srcCall'],['واتساب','srcWhats'],['إنستجرام','srcIg'],['فيسبوك','srcFb'],['تيك توك','srcTt'],['الموقع','srcSite'],['Vezeeta','srcVz'],['زيارة','srcWalk'],['إعلان','srcAd']];
 const PAYS=['كاش','فيزا','إنستاباي','تقسيط'];
 function bsLabel(s){ const m=BS[s]; return m?t(m.key):(s||'—'); }
 function lsLabel(s){ const m=LS[s]; return m?t(m.key):(s||'—'); }
@@ -2666,11 +2706,11 @@ function filteredLeads(){
 
 /* ========== English display of sheet data (names stay Arabic in the sheet) ========== */
 const EN_NAMES={
- 'كشف واستشارة':'Consultation','متابعة':'Follow-up visit','منظار معدة':'Upper endoscopy','منظار قولون':'Colonoscopy','منظار معدة وقولون':'Upper endoscopy + colonoscopy','بالونة المعدة':'Gastric balloon','بوتوكس المعدة':'Gastric Botox','علاج الارتجاع بالمنظار':'Endoscopic reflux treatment','إزالة زوائد القولون':'Colon polyp removal',
+ 'كشف واستشارة':'Consultation','متابعة':'Follow-up visit','منظار معدة':'Upper endoscopy','منظار قولون':'Colonoscopy','منظار معدة وقولون':'Upper endoscopy + colonoscopy','بالونة المعدة':'Gastric balloon','الكبسولة الذكية':'Smart capsule balloon','علاج الارتجاع بالمنظار':'Endoscopic reflux treatment','إزالة زوائد القولون':'Colon polyp removal',
  'التجمع الخامس':'Fifth Settlement','مدينتي':'Madinaty','الرحاب':'El Rehab','القاهرة الجديدة':'New Cairo','التجمع':'Tagamoa',
  'د. هيثم راضي':'Dr. Haytham Rady','استشاري الجهاز الهضمي والمناظير':'Consultant, Gastroenterology & Endoscopy',
  'السعر عالي':'Price too high','مش بيرد':'Not responding','بعيد عن الفروع':'Too far from branches','حجز عند دكتور تاني':'Booked elsewhere','مش مهتم':'Not interested','رقم غلط':'Wrong number','أخرى':'Other',
- 'فورم الموقع':'Website form','إعلان فيسبوك':'Facebook ad','إعلان إنستجرام':'Instagram ad','تعليق إنستجرام':'Instagram comment','كول سنتر':'Call center','واتساب':'WhatsApp','إعلان':'Ad','الموقع':'Website','اتصال':'Call','زيارة':'Walk-in',
+ 'فورم الموقع':'Website form','إعلان فيسبوك':'Facebook ad','إعلان إنستجرام':'Instagram ad','تعليق إنستجرام':'Instagram comment','تليفون':'Phone','إنستجرام':'Instagram','فيسبوك':'Facebook','تيك توك':'TikTok','واتساب':'WhatsApp','إعلان':'Ad','الموقع':'Website','اتصال':'Call','زيارة':'Walk-in',
  'كاش':'Cash','فيزا':'Visa','إنستاباي':'InstaPay','تقسيط':'Installments','غير محدد':'Not specified',
  'تغيير حالة ليد':'Lead status changed','إعادة جدولة حجز':'Booking rescheduled','تأكيد حضور ودفع':'Attendance & payment confirmed','تحديث الملف الشخصي':'Profile updated','تحديث ليد':'Lead updated','تحويل ليد لحجز':'Lead converted to booking','تعديل مبلغ':'Amount edited','تغيير حالة حجز':'Booking status changed','حجز جديد':'New booking','ليد جديد':'New lead','متابعة اتحجزت':'Follow-up booked','المريض لغى الموعد':'Patient cancelled the appointment','المريض عدّل موعده':'Patient rescheduled','المريض أكّد الموعد':'Patient confirmed the appointment','طلب التحدث مع موظف':'Asked for a staff member','حالة عاجلة من واتساب':'Urgent case from WhatsApp','تقييم زيارة':'Visit rating','ملاحظة تقييم':'Rating note',
  'لم يحضر':'No-show','حضر':'Attended','مؤكد':'Confirmed','ملغي':'Cancelled','بانتظار الرد':'Awaiting reply','تم الاتصال':'Contacted','تم الحجز':'Booked','ضايع':'Lost','جديد':'New','خامات':'materials','ج':'EGP'
@@ -2781,7 +2821,7 @@ function normalizeData(d){
   const arr=x=>Array.isArray(x)?x.map(o=>{ if(!o||typeof o!=='object') return o; const c={}; for(const k in o) c[k]=clean(o[k]); return c; }):[];
   return {
     now:String(d.now||''), user:d.user||null, bookings:arr(d.bookings), leads:arr(d.leads), branches:arr(d.branches), services:arr(d.services),
-    doctors:arr(d.doctors), schedule:arr(d.schedule), activity:arr(d.activity), users:Array.isArray(d.users)?d.users:[]
+    doctors:arr(d.doctors), schedule:arr(d.schedule), activity:arr(d.activity), stock:arr(d.stock), recipes:arr(d.recipes), stock_moves:arr(d.stock_moves), users:Array.isArray(d.users)?d.users:[]
   };
 }
 function detectNew(){
@@ -3008,9 +3048,70 @@ function renderPatients(){
   $("#patientsTable").innerHTML=list.slice(0,300).map(p=>`<tr class="clickable" data-patient="${escHtml(p.key)}"><td><b>${escHtml(p.name)}</b></td><td dir="ltr" style="text-align:start">${escHtml(p.phone)}</td><td>${p.visits}</td><td>${p.bookings}</td><td>${p.noshow?`<span class="badge b-red">${p.noshow}</span>`:'0'}</td><td>${p.last?escHtml(fmtDate(p.last)):'—'}</td><td>${p.next?escHtml(fmtDay(p.next)):'—'}</td></tr>`).join('')||`<tr><td colspan="7" class="empty">${t('noMatching')}</td></tr>`;
 }
 
+/* no pinch / double-tap zoom, same as an installed app */
+['gesturestart','gesturechange','gestureend'].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault(),{passive:false}));
+document.addEventListener('touchmove',e=>{ if(e.touches&&e.touches.length>1) e.preventDefault(); },{passive:false});
+
+/* ========================= stock ========================= */
+function ts(ar,en){ return LANG==='ar'?ar:en; }
+function nnum(v){ const x=String(v??'').trim(); const n=Number(x.replace(/[^0-9.]/g,''))||0; return x.charAt(0)==='-'?-n:n; }
+function recipeOf(service){ return D.recipes.filter(r=>r.service===service&&nnum(r.qty)>0); }
+function recipeCostOf(service){ const rs=recipeOf(service); if(!rs.length) return null; return sum(rs,r=>{ const st=D.stock.find(x=>x.item===r.item); return nnum(r.qty)*(st?nnum(st.unit_cost):0); }); }
+function stkState(s){ const q=nnum(s.qty), m=nnum(s.min_qty); return q<=0?'out':q<=m?'low':'ok'; }
+function renderStock(){
+  const box=$("#stkKpis"); if(!box) return;
+  const items=D.stock; const low=items.filter(s=>stkState(s)!=='ok');
+  const dot=$("#navStockDot"); if(dot) dot.hidden=!low.length||!can('stock');
+  if(!can('stock')) return;
+  $("#stkSumTitle").textContent=ts('ملخص المخزون','Stock summary'); $("#stkItemsTitle").textContent=ts('الأصناف','Items'); $("#stkNewLbl").textContent=ts('صنف جديد','New item');
+  $("#stkCostTitle").textContent=ts('تكلفة وهامش كل خدمة','Cost & margin per service'); $("#stkMovesTitle").textContent=ts('حركة المخزون','Stock movements');
+  const value=sum(items,s=>Math.max(nnum(s.qty),0)*nnum(s.unit_cost));
+  const since=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
+  const used=sum(D.stock_moves.filter(m=>String(m.time).slice(0,10)>=since&&nnum(m.change)<0),m=>{ const st=items.find(x=>x.item===m.item); return -nnum(m.change)*(st?nnum(st.unit_cost):0); });
+  box.innerHTML=`<div class="fin-kpi hl"><small>${ts('قيمة المخزون الحالي','Stock value')}</small><b>${money(value)}</b><span>${items.length} ${ts('صنف','items')}</span></div>
+  <div class="fin-kpi"><small>${ts('محتاج طلب','Needs reorder')}</small><b>${low.length}</b><span>${low.length?escHtml(low.slice(0,2).map(s=>s.item).join('، '))+(low.length>2?'…':''):ts('كل الأصناف متوفرة','All items in stock')}</span></div>
+  <div class="fin-kpi"><small>${ts('المصروف آخر 30 يوم','Used in last 30 days')}</small><b>${money(used)}</b><span>${ts('بتكلفة الوحدة الحالية','At current unit cost')}</span></div>
+  <div class="fin-kpi"><small>${ts('خدمات لها تكلفة محسوبة','Services with a costed recipe')}</small><b>${D.services.filter(s=>recipeOf(s.service).length).length} / ${D.services.length}</b><span>${ts('من مكوّنات كل خدمة','From each service recipe')}</span></div>`;
+  $("#stkHead").innerHTML=`<tr><th>${ts('الصنف','Item')}</th><th>${ts('الرصيد','On hand')}</th><th>${ts('الحد الأدنى','Min')}</th><th>${ts('تكلفة الوحدة','Unit cost')}</th><th>${ts('قيمة الرصيد','Value')}</th><th>${ts('الحالة','Status')}</th><th>${ts('إجراء','Action')}</th></tr>`;
+  const lbl={ok:ts('متوفر','In stock'),low:ts('قرّب يخلص','Low'),out:ts('خلص','Out')};
+  const order={out:0,low:1,ok:2};
+  $("#stkRows").innerHTML=items.slice().sort((a,b)=>order[stkState(a)]-order[stkState(b)]||a.item.localeCompare(b.item,'ar')).map(s=>{ const q=nnum(s.qty), m=nnum(s.min_qty), st=stkState(s); const w=m>0?Math.min(100,Math.round(q/(m*3)*100)):100;
+    return `<tr><td><b>${escHtml(s.item)}</b></td><td><div class="stk-qty"><b>${q} ${escHtml(s.unit||'')}</b><div class="progress"><b class="${st==='ok'?'':'danger'}" style="width:${Math.max(w,q>0?4:0)}%"></b></div></div></td><td>${m}</td><td>${money(nnum(s.unit_cost))}</td><td>${money(Math.max(q,0)*nnum(s.unit_cost))}</td><td><span class="stk-badge ${st}">${lbl[st]}</span></td><td><div class="stk-acts"><button type="button" class="btn good" data-stk-in="${escHtml(s.item)}">${ts('توريد','Receive')}</button><button type="button" class="btn ghost" data-stk-out="${escHtml(s.item)}">${ts('صرف','Issue')}</button><button type="button" class="btn ghost" data-stk-edit="${escHtml(s.item)}">${ts('تعديل','Edit')}</button></div></td></tr>`; }).join('')||`<tr><td colspan="7" class="empty">${ts('مفيش أصناف لسه','No items yet')}</td></tr>`;
+  $("#stkCostHead").innerHTML=`<tr><th>${ts('الخدمة','Service')}</th><th>${ts('السعر','Price')}</th><th>${ts('تكلفة المستلزمات','Supplies cost')}</th><th>${ts('الهامش','Margin')}</th><th>%</th><th>${ts('المكوّنات لكل حالة','Used per case')}</th></tr>`;
+  $("#stkCost").innerHTML=D.services.map(sv=>{ const price=nnum(sv.price); const rc=recipeCostOf(sv.service); const cost=rc===null?nnum(sv.materials):rc; const mg=price-cost;
+    return `<tr><td><b>${escHtml(sv.service)}</b></td><td>${money(price)}</td><td>${money(cost)}</td><td><b>${money(mg)}</b></td><td>${price?pct(mg,price):0}%</td><td>${recipeOf(sv.service).map(r=>`<span class="stk-chip">${nnum(r.qty)}× ${escHtml(r.item)}</span>`).join('')||'<span class="stk-chip">'+ts('بدون مستلزمات','No supplies')+'</span>'}</td></tr>`; }).join('');
+  $("#stkCostNote").textContent=ts('التكلفة = كمية كل صنف في الخدمة × تكلفة الوحدة الحالية. الأصناف دي بتتخصم من المخزون تلقائيًا أول ما الحضور يتأكد، وبترجع لو الحضور اتلغى.','Cost = quantity of each item per case × current unit cost. Items are deducted automatically when attendance is confirmed, and returned if it is undone.');
+  $("#stkMovesHead").innerHTML=`<tr><th>${ts('الوقت','Time')}</th><th>${ts('الصنف','Item')}</th><th>${ts('الحركة','Change')}</th><th>${ts('الرصيد بعدها','Balance')}</th><th>${ts('السبب','Reason')}</th><th>${ts('بواسطة','By')}</th></tr>`;
+  $("#stkMoves").innerHTML=D.stock_moves.slice().reverse().slice(0,40).map(m=>{ const c=nnum(m.change); return `<tr><td dir="ltr" style="text-align:start">${escHtml(m.time)}</td><td>${escHtml(m.item)}</td><td><span class="${c>0?'stk-plus':'stk-minus'}" dir="ltr">${c>0?'+':''}${c}</span></td><td>${escHtml(m.balance)}</td><td>${escHtml(m.reason)}</td><td>${escHtml(m.actor)}</td></tr>`; }).join('')||`<tr><td colspan="6" class="empty">${ts('لسه مفيش حركة','No movements yet')}</td></tr>`;
+}
+function stkForm(title,fields,onSubmit){
+  openModal(title,`<form id="stkForm"><div class="fgrid">${fields}</div><div class="login-error" id="stkError" hidden></div><button type="submit" class="btn primary auth-submit" id="stkSave"><svg><use href="#i-check"/></svg><span>${ts('حفظ','Save')}</span></button></form>`);
+  $("#stkForm").addEventListener('submit',async e=>{ e.preventDefault(); const err=$("#stkError"); err.hidden=true; $("#stkSave").disabled=true;
+    try{ const d=await onSubmit(); if(d.ok){ closeModal(); toast(ts('اتحفظ ✅','Saved ✅')); await loadData(false); } else { err.hidden=false; err.textContent=d.error==='invalid_fields'?ts('راجع البيانات: الكمية والسبب مطلوبين','Check the fields: quantity and reason are required'):errText(d); } }
+    catch(ex){ if(ex.message!=='unauthorized'){ err.hidden=false; err.textContent=t('toastActionFailed'); } }
+    const b=$("#stkSave"); if(b) b.disabled=false; });
+}
+function openStockMove(item,dir){ const s=D.stock.find(x=>x.item===item); if(!s) return;
+  stkForm((dir>0?ts('توريد','Receive')+' — ':ts('صرف','Issue')+' — ')+item,`<div class="fld"><label>${ts('الكمية','Quantity')} (${escHtml(s.unit||'')})</label><input id="stkQty" type="number" inputmode="numeric" min="1" max="100000" step="1" required></div>
+    ${dir>0?`<div class="fld"><label>${ts('تكلفة الوحدة (ج)','Unit cost (EGP)')}</label><input id="stkCostIn" type="number" inputmode="decimal" min="0" step="1" value="${nnum(s.unit_cost)}"></div>`:''}
+    <div class="fld"><label>${ts('السبب','Reason')}</label><input id="stkReason" required maxlength="80" value="${dir>0?ts('توريد من المورد','Supplier delivery'):''}" placeholder="${dir>0?'':ts('مثال: تالف، منتهي الصلاحية','e.g. damaged, expired')}"></div>
+    <div class="fld"><label>${ts('الرصيد الحالي','Current balance')}</label><input value="${nnum(s.qty)} ${escHtml(s.unit||'')}" disabled></div>`,
+    ()=>{ const q=Math.round(Number($("#stkQty").value)); const p={item,change:String(dir*q),reason:$("#stkReason").value.trim()}; if(dir>0) p.unit_cost=$("#stkCostIn").value; return act('stock_move',p); });
+}
+function openStockItem(item){ const s=item?D.stock.find(x=>x.item===item):null;
+  stkForm(s?ts('تعديل صنف','Edit item'):ts('صنف جديد','New item'),`<div class="fld"><label>${ts('اسم الصنف','Item name')}</label><input id="stkName" required maxlength="60" value="${escHtml(s?s.item:'')}" ${s?'disabled':''}></div>
+    <div class="fld"><label>${ts('الوحدة','Unit')}</label><input id="stkUnit" maxlength="20" value="${escHtml(s?s.unit:ts('قطعة','piece'))}"></div>
+    ${s?'':`<div class="fld"><label>${ts('الرصيد الافتتاحي','Opening balance')}</label><input id="stkOpen" type="number" inputmode="numeric" min="0" step="1" value="0"></div>`}
+    <div class="fld"><label>${ts('الحد الأدنى للتنبيه','Reorder level')}</label><input id="stkMin" type="number" inputmode="numeric" min="0" step="1" required value="${s?nnum(s.min_qty):1}"></div>
+    <div class="fld"><label>${ts('تكلفة الوحدة (ج)','Unit cost (EGP)')}</label><input id="stkUc" type="number" inputmode="decimal" min="0" step="1" required value="${s?nnum(s.unit_cost):''}"></div>`,
+    ()=>{ const p={item:s?s.item:$("#stkName").value.trim(),unit:$("#stkUnit").value.trim(),min_qty:$("#stkMin").value,unit_cost:$("#stkUc").value}; if(!s) p.qty=$("#stkOpen").value||'0'; return act('stock_save',p); });
+}
+document.addEventListener('click',e=>{ const b=e.target.closest('[data-stk-in],[data-stk-out],[data-stk-edit],#stkNew'); if(!b) return;
+  if(b.id==='stkNew') openStockItem(''); else if(b.dataset.stkIn) openStockMove(b.dataset.stkIn,1); else if(b.dataset.stkOut) openStockMove(b.dataset.stkOut,-1); else openStockItem(b.dataset.stkEdit); });
+
 /* ========================= finance ========================= */
 let finPeriod='week';
-function matOf(b){ if(b.materials!==undefined&&String(b.materials).trim()!=='') return Number(String(b.materials).replace(/[^0-9.]/g,''))||0; const sv=D.services.find(x=>x.service===b.service); return Number(String(sv&&sv.materials||'').replace(/[^0-9.]/g,''))||0; }
+function matOf(b){ if(b.materials!==undefined&&String(b.materials).trim()!=='') return Number(String(b.materials).replace(/[^0-9.]/g,''))||0; const rc0=recipeCostOf(b.service); if(rc0!==null) return rc0; const sv=D.services.find(x=>x.service===b.service); return Number(String(sv&&sv.materials||'').replace(/[^0-9.]/g,''))||0; }
 function priceOf(b){ const a=Number(String(b.amount||'').replace(/[^0-9.]/g,'')); if(a>0) return a; const sv=D.services.find(x=>x.service===b.service); return Number(String(sv&&sv.price||'').replace(/[^0-9.]/g,''))||0; }
 function weekStartSat(dateStr){ const d=new Date(pdt(dateStr)); const sinceSat=(d.getUTCDay()+1)%7; return addDays(dateStr,-sinceSat); }
 function finDates(){
@@ -3149,10 +3250,10 @@ function renderNotifications(){
 
 /* ========================= section handling ========================= */
 const secSearch={}; const PH={appointments:'phAppointments',leads:'phLeads',doctors:'phDoctors',patients:'phPatients'};
-const SECTIONS=['home','appointments','leads','doctors','branches','patients','finance','reports','activity','opstatus','users'];
+const SECTIONS=['home','appointments','leads','doctors','branches','patients','finance','stock','reports','activity','opstatus','users'];
 const CAPS={ // which filter controls make sense per section
   home:{search:1,branch:1}, appointments:{search:1,branch:1,status:1,adv:1,date:1,doctor:1,source:1}, leads:{search:1,status:1,adv:1,source:1},
-  doctors:{search:1,branch:1}, branches:{branch:1}, patients:{search:1,branch:1}, finance:{branch:1}, reports:{branch:1}, activity:{}, opstatus:{}, users:{}
+  doctors:{search:1,branch:1}, branches:{branch:1}, patients:{search:1,branch:1}, finance:{branch:1}, stock:{}, reports:{branch:1}, activity:{}, opstatus:{}, users:{}
 };
 function sectionTitle(id){ const k=id[0].toUpperCase()+id.slice(1); const sub=id==='home'?new Date().toLocaleDateString(LANG==='ar'?'ar-EG-u-nu-latn':'en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):t('sub'+k); return {title:t('title'+k),sub:sub}; }
 function refreshSectionTitle(){ $("#search").placeholder=t(PH[currentSection]||'searchPlaceholder'); const s=sectionTitle(currentSection); $("#pageTitle").textContent=s.title; $("#pageSub").textContent=s.sub; renderGreeting(); }
@@ -3176,7 +3277,7 @@ function showSection(id){
   if(location.hash!=='#'+id) history.replaceState(null,'','#'+id);
 }
 function renderAll(){
-  renderKpis(); renderHome(); renderAppointments(); renderLeads(); renderDoctors(); renderBranches(); renderPatients(); renderFinance(); renderReports(); renderActivity(); renderUsers(); renderNotifications(); renderAgenda(); renderQf();
+  renderKpis(); renderHome(); renderAppointments(); renderLeads(); renderDoctors(); renderBranches(); renderPatients(); renderFinance(); renderStock(); renderReports(); renderActivity(); renderUsers(); renderNotifications(); renderAgenda(); renderQf();
   const u=D.user||getUser(); if($("#roleChip")&&u) $("#roleChip").textContent=u.role||'—';
 }
 function openDrawer(){ $(".sidebar").classList.add("open"); $("#drawerBackdrop").classList.add("show"); }
@@ -3271,7 +3372,7 @@ function openBookingForm(lead,opts){
   bk={slot:null,leadId:lead?String(lead.id):'',resched:rs,pre:{...pre},doctor:'',date:rs?(rs.date<TODAY()?'':rs.date):(pre.date||'')};
   const today=TODAY(); const brSel=(D.user&&D.user.branch)?D.user.branch:($("#branch").value!=='all'?$("#branch").value:'');
   const svcMatch=rs?rs.service:(lead&&D.services.find(s=>s.service===lead.service)?lead.service:'');
-  const srcDefault=lead?(/واتساب/.test(lead.source)?'واتساب':'إعلان'):'كول سنتر';
+  const srcDefault=lead?(/واتساب/.test(lead.source)?'واتساب':'إعلان'):'تليفون';
   const patient=rs?rs.patient:(pre.patient||(lead?lead.name:''));
   const phone=rs?rs.phone:(pre.phone||(lead&&phoneDigits(lead.phone)?lead.phone:''));
   const branch=rs?rs.branch:(pre.branch||brSel);
