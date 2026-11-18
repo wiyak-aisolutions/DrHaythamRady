@@ -21,11 +21,11 @@
 <meta name="apple-mobile-web-app-title" content="مكتب المركز">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/logo-192.jpg">
-<title>مكتب العيادة — د. هيثم راضي</title>
+<title>د. هيثم راضي — نظام العيادة</title>
 <link rel="icon" type="image/jpeg" href="assets/logo-192.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0F1C2C; --muted:#66778F; --muted-2:#8090A7;
@@ -1999,7 +1999,7 @@ html[data-theme] .kpis .kpi:nth-child(2)::after{display:none!important}
 html[data-theme] .kpi-ico{box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 16px -8px rgba(0,0,0,.4)!important}
 html[data-theme] .kpi-ico.blue{background:var(--hero)!important;color:var(--on-gold)!important}
 html[data-theme] .kpi:hover{transform:translateY(-3px)}
-html[data-theme] .kpi .num,html[data-theme] .num,html[data-theme] .money,html[data-theme] .week-total b{font-family:"IBM Plex Sans","IBM Plex Sans Arabic",sans-serif;font-weight:500;letter-spacing:-.01em}
+html[data-theme] .kpi .num,html[data-theme] .num,html[data-theme] .money,html[data-theme] .week-total b{font-family:"Alexandria",sans-serif;font-weight:500;letter-spacing:-.01em}
 
 /* ---------- charts / bars ---------- */
 html[data-theme] .bar-track{background:var(--panel-2)!important;box-shadow:none!important}
@@ -2067,8 +2067,9 @@ html[data-theme] .card:not(.kpi):hover{transform:none}
 html[data-theme] input,html[data-theme] select,html[data-theme] textarea{font-size:16px}
 
 /* ===== calm pass: one typeface, no decorative motion ===== */
-:root,html[data-theme="light"],html[data-theme="dark"]{--font:"IBM Plex Sans Arabic","IBM Plex Sans",-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
-html[lang="en"],html[lang="en"] body{--font:"IBM Plex Sans","IBM Plex Sans Arabic",-apple-system,"Segoe UI",Arial,sans-serif}
+:root,html[data-theme="light"],html[data-theme="dark"]{--font:"Alexandria",-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+html[data-theme] h1,html[data-theme] h2,html[data-theme] .brand-word{letter-spacing:-.2px;font-weight:600}
+html[data-theme] body{font-weight:400}
 body,button,input,select,textarea{font-family:var(--font)}
 .table td,.kpi .num,.fin-kpi b,.order-id{font-variant-numeric:tabular-nums}
 @keyframes mkRise{from{opacity:0}to{opacity:1}}
@@ -2085,8 +2086,38 @@ html[data-theme] body::before,html[data-theme] body::after{animation:none!import
 .pulse-dot::after,.conn-dot::after,.live-pill i::after{display:none!important}
 html[data-theme] .card:hover,html[data-theme] .kpi:hover,html[data-theme] .card.kpi:hover{transform:none!important}
 .kpis .kpi::before{display:none!important}
+/* Powered by WIYAK — fixed credit template */
+.wy-credit{gap:8px;direction:ltr;opacity:.85}.wy-credit:hover{transform:none;opacity:1}
+.wy-credit .wy-pb{font:500 10px/1 "Alexandria",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.wy-credit img{height:20px}
 html[data-theme] .section .card,html[data-theme] .section .card.kpi,html[data-theme] .section tbody tr,html[data-theme] .section .fin-kpi{animation:none!important;opacity:1!important}
 html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gradient(150deg,var(--glass),var(--glass-2)) padding-box,var(--rim) border-box!important}
+
+/* ===== touch: instant press feedback + draggable bottom sheet ===== */
+*{-webkit-tap-highlight-color:transparent}
+.btn,.m-bottomnav button,#nav button,.day,.seg button,.chip,.m-fab,.close,.modal-back,.theme-toggle{transition:transform .1s ease-out,filter .1s ease-out}
+.btn:active,.m-bottomnav button:active,#nav button:active,.seg button:active,.chip:active,.close:active,.modal-back:active,.theme-toggle:active{transform:scale(.96)}
+.m-fab:active{transform:scale(.93)}
+.card.kpi:active{transform:scale(.985)!important;transition:transform .1s ease-out}
+.table tr.clickable:active td{background:color-mix(in srgb,var(--blue,#0B5CB8) 9%,transparent)}
+.kpi .num,.fin-kpi b{letter-spacing:-.02em}
+@media (max-width:860px){
+  html .modal-box{animation:none!important;will-change:transform;touch-action:pan-y}
+  html .modal-box > .modal-head{touch-action:none;cursor:grab;padding-top:22px;position:relative}
+  html .modal-box > .modal-head::before{content:"";position:absolute;top:8px;left:50%;width:38px;height:5px;margin-left:-19px;border-radius:99px;background:var(--muted);opacity:.35}
+  html .modal.sheet-drag{transition:none}
+}
+
+/* ===== swipe actions on today's appointment cards (phones) ===== */
+@media (max-width:860px){
+  #homeAppts .td-item{touch-action:pan-y;position:relative;z-index:1;will-change:transform}
+  .sw-wrap{position:relative;border-radius:18px}
+  .sw-under{position:absolute;inset:0;border-radius:18px;display:flex;align-items:center;padding:0 18px;font-size:13px;font-weight:600;color:#fff;opacity:.55;transition:opacity .12s}
+  .sw-under.attend{background:#1E9E62;justify-content:flex-end;direction:ltr}
+  .sw-under.edit{background:var(--brand-blue,#0B5CB8);justify-content:flex-start;direction:ltr}
+  .sw-under.armed{opacity:1}
+  .sw-under.off{background:var(--muted);opacity:.35}
+}
 </style>
 </head>
 <body>
@@ -2166,7 +2197,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
   <div class="login-card">
     <div class="login-logo"><img src="assets/logo-192.jpg" alt="د. هيثم راضي"></div>
     <div class="login-title" data-i18n="brandWord">د. هيثم راضي</div>
-    <div class="login-sub" data-i18n="loginSub">أهلاً بيك.. ادخل مكتب العيادة</div>
+    <div class="login-sub" data-i18n="loginSub">أهلًا بيك. سجّل دخولك عشان تكمّل</div>
     <div class="auth-tabs" role="tablist">
       <button type="button" class="auth-tab active" data-auth-tab="login" data-i18n="tabSignIn">تسجيل الدخول</button>
       <button type="button" class="auth-tab" data-auth-tab="signup" data-i18n="tabSignUp">إنشاء حساب</button>
@@ -2186,7 +2217,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
       <div id="signupMsg" class="login-error" hidden></div>
       <button type="submit" class="btn primary auth-submit" id="signupSubmit"><svg><use href="#i-plus"/></svg><span data-i18n="createAccount">إنشاء الحساب</span></button>
     </form>
-    <a class="wy-credit wy-login" href="https://www.wiyak.com" target="_blank" rel="noopener" aria-label="Wayak"><img class="wy-light" src="assets/wy-horizontal.png" alt="ويّاك — Wayak"><img class="wy-dark" src="assets/wy-horizontal-white.png" alt="ويّاك — Wayak"></a>
+    <a class="wy-credit wy-login" href="https://wiyak.co" target="_blank" rel="noopener" aria-label="Powered by WIYAK"><span class="wy-pb">Powered by</span><img class="wy-light" src="assets/wy-horizontal.png" alt="WIYAK"><img class="wy-dark" src="assets/wy-horizontal-white.png" alt="WIYAK"></a>
   </div>
   <nav class="login-links" aria-label="د. هيثم راضي">
     <a href="https://drhaythamrady.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span data-i18n="linkWeb">الموقع</span></a>
@@ -2230,7 +2261,7 @@ html[data-theme] .card:not(.kpi),html[data-theme] .filters{background:linear-gra
     <button data-section="users"><svg><use href="#i-users"/></svg><span data-i18n="navUsers">المستخدمين</span><b class="nav-count" id="navUserCount" hidden></b></button>
   </nav>
   <div class="side-spacer"></div>
-  <a class="wy-credit wy-side" href="https://www.wiyak.com" target="_blank" rel="noopener" aria-label="Wayak"><img class="wy-light" src="assets/wy-horizontal.png" alt="ويّاك — Wayak"><img class="wy-dark" src="assets/wy-horizontal-white.png" alt="ويّاك — Wayak"></a>
+  <a class="wy-credit wy-side" href="https://wiyak.co" target="_blank" rel="noopener" aria-label="Powered by WIYAK"><span class="wy-pb">Powered by</span><img class="wy-light" src="assets/wy-horizontal.png" alt="WIYAK"><img class="wy-dark" src="assets/wy-horizontal-white.png" alt="WIYAK"></a>
   <div class="side-lang lang-switch"><button class="lang-btn" data-lang="ar">AR</button><button class="lang-btn" data-lang="en">EN</button></div>
   <div class="user-chip" id="userChip" hidden><span class="user-avatar" id="userAvatar"></span><div class="user-meta"><b id="userName"></b><small id="userEmail"></small></div><button class="user-logout" id="logoutBtn"><svg><use href="#i-logout"/></svg></button></div>
 </aside>
@@ -2445,7 +2476,7 @@ let booted = false;
 let LANG = localStorage.getItem('drh-lang') || 'ar';
 const I18N = {
  ar:{
-  brandWord:"د. هيثم راضي", brandTag:"مكتب العيادة",
+  brandWord:"د. هيثم راضي", brandTag:"الجهاز الهضمي والمناظير",
   linksTitle:"روابط العيادة", linksHint:"نفس الروابط اللي المساعد بيبعتها للمريض لما يسأل عن صفحاتنا.", linkWeb:"الموقع",
   navUsers:"المستخدمين", titleUsers:"المستخدمين", subUsers:"مين يدخل اللوحة وبيشوف إيه", usersTitle:"المستخدمين والصلاحيات", usersHint:"أي حد بيعمل حساب من شاشة الدخول بيظهر هنا «مستني الموافقة». اضغط «تعديل» عشان تفعّله وتحدد صلاحياته وفرعه.", uPending:"مستني الموافقة", uApproved:"مفعّل", uDisabled:"موقوف", uAdmin:"مدير (كل الصلاحيات)", uStaff:"موظف", uAllBranches:"كل الفروع", uEdit:"تعديل", uSave:"حفظ", uSaved:"اتحفظ", uSelfLock:"ماينفعش توقف حسابك أو تشيل منه صلاحية المدير", uNoUsers:"مفيش مستخدمين لسه", uStatusLbl:"الحالة", uRoleLbl:"النوع", uBranchLbl:"الفرع", uPermsLbl:"الصلاحيات", uNoPerms:"بدون صلاحيات", uLastLogin:"آخر دخول", uNever:"لسه", uYou:"انت", uAdminNote:"المدير بيشوف كل حاجة في كل الفروع، وبيدير المستخدمين.", uBranchNote:"لو سبت الفرع «كل الفروع» الموظف هيشوف كل الفروع.", permAttendance:"تأكيد الحضور والدفع", uSaveErr:"ما اتحفظش، جرّب تاني",
   navHome:"الرئيسية", navAppointments:"المواعيد", navLeads:"الاستفسارات", navDoctors:"الجدول", navBranches:"الفروع", navPatients:"المرضى", navReports:"التقارير", navActivity:"سجل النشاط", navStatus:"حالة التشغيل", integAiTitle:"المساعد الذكي", integAiSub:"فهم رسائل واتساب بالذكاء الاصطناعي", titleOpstatus:"حالة التشغيل", subOpstatus:"اتصال الأنظمة اللي بتشغّل العيادة", navMore:"المزيد",
@@ -2494,7 +2525,7 @@ const I18N = {
   addressLbl:"العنوان", areaLbl:"المنطقة", branchPhone:"تليفون الفرع", visitsWord:"زيارة", noShowWord:"لم يحضر",
   installTitle:"ثبّت تطبيق العيادة", installSub:"افتح اللوحة بلمسة من الشاشة الرئيسية", installBtn:"تثبيت", iosSheetTitle:"تثبيت التطبيق على آيفون", iosStep1:"اضغط زر المشاركة في شريط Safari", iosStep2:"اختار «إضافة إلى الشاشة الرئيسية»", iosStep3:"اضغط «إضافة» — والتطبيق هيظهر مع باقي تطبيقاتك", gotIt:"تمام",
   themeToDark:"تفعيل الوضع الليلي", themeToLight:"تفعيل الوضع النهاري",
-  loginSub:"أهلًا بيك. سجّل دخولك لمكتب العيادة", tabSignIn:"تسجيل الدخول", tabSignUp:"إنشاء حساب", fieldEmail:"البريد الإلكتروني", fieldPassword:"كلمة المرور", fieldName:"الاسم", fieldConfirmPassword:"تأكيد كلمة المرور",
+  loginSub:"أهلًا بيك. سجّل دخولك عشان تكمّل", tabSignIn:"تسجيل الدخول", tabSignUp:"إنشاء حساب", fieldEmail:"البريد الإلكتروني", fieldPassword:"كلمة المرور", fieldName:"الاسم", fieldConfirmPassword:"تأكيد كلمة المرور",
   rememberMe:"افتكرني على الجهاز ده", signIn:"تسجيل الدخول", createAccount:"إنشاء الحساب", logout:"تسجيل الخروج",
   loginFailed:"الإيميل أو كلمة المرور غلط", loginConnFailed:"تعذّر الاتصال، حاول تاني بعد لحظات", sessionExpired:"انتهت الجلسة، سجّل دخول تاني",
   pwTooShort:"كلمة المرور لازم تكون 8 حروف على الأقل", pwMismatch:"كلمتين المرور مش زي بعض", signupPending:"تم إنشاء الحساب — في انتظار موافقة الإدارة قبل ما تقدر تدخل",
@@ -2515,7 +2546,7 @@ const I18N = {
   gsPatients:"المرضى", gsLeads:"الاستفسارات", gsBookings:"الحجوزات", gsNone:"مفيش نتائج"
  },
  en:{
-  brandWord:"Dr. Haytham Rady", brandTag:"Clinic Desk",
+  brandWord:"Dr. Haytham Rady", brandTag:"Gastroenterology & Endoscopy",
   linksTitle:"Clinic links", linksHint:"The same links the bot sends when a patient asks for our pages.", linkWeb:"Website",
   navUsers:"Users", titleUsers:"Users", subUsers:"Who can open the dashboard and what they see", usersTitle:"Users & permissions", usersHint:"Anyone who signs up from the login screen shows up here as “Waiting for approval”. Press “Edit” to activate them and set their permissions and branch.", uPending:"Waiting for approval", uApproved:"Active", uDisabled:"Disabled", uAdmin:"Admin (full access)", uStaff:"Staff", uAllBranches:"All branches", uEdit:"Edit", uSave:"Save", uSaved:"Saved", uSelfLock:"You can't disable your own account or remove your own admin role", uNoUsers:"No users yet", uStatusLbl:"Status", uRoleLbl:"Type", uBranchLbl:"Branch", uPermsLbl:"Permissions", uNoPerms:"No permissions", uLastLogin:"Last login", uNever:"never", uYou:"you", uAdminNote:"Admins see everything in every branch and manage users.", uBranchNote:"Leaving the branch on “All branches” lets this staff member see every branch.", permAttendance:"Attendance & payment", uSaveErr:"Couldn't save, try again",
   navHome:"Home", navAppointments:"Appointments", navLeads:"Leads", navDoctors:"Schedule", navBranches:"Branches", navPatients:"Patients", navReports:"Reports", navActivity:"Activity log", navStatus:"System Status", integAiTitle:"AI assistant", integAiSub:"Understands WhatsApp messages with AI", titleOpstatus:"System status", subOpstatus:"Connection of the systems that run the clinic", navMore:"More",
@@ -2564,7 +2595,7 @@ const I18N = {
   addressLbl:"Address", areaLbl:"Area", branchPhone:"Branch phone", visitsWord:"visits", noShowWord:"no-show",
   installTitle:"Install the clinic app", installSub:"Open the dashboard in one tap from your home screen", installBtn:"Install", iosSheetTitle:"Install on iPhone", iosStep1:"Tap the Share button in Safari's toolbar", iosStep2:"Choose “Add to Home Screen”", iosStep3:"Tap “Add” — the app appears with your other apps", gotIt:"Got it",
   themeToDark:"Switch to dark mode", themeToLight:"Switch to light mode",
-  loginSub:"Welcome back. Sign in to the Clinic Desk", tabSignIn:"Sign in", tabSignUp:"Create account", fieldEmail:"Email", fieldPassword:"Password", fieldName:"Name", fieldConfirmPassword:"Confirm password",
+  loginSub:"Welcome back. Sign in to continue", tabSignIn:"Sign in", tabSignUp:"Create account", fieldEmail:"Email", fieldPassword:"Password", fieldName:"Name", fieldConfirmPassword:"Confirm password",
   rememberMe:"Remember me on this device", signIn:"Sign in", createAccount:"Create account", logout:"Log out",
   loginFailed:"Incorrect email or password", loginConnFailed:"Couldn't reach the login server", sessionExpired:"Your session expired, please sign in again",
   pwTooShort:"Password must be at least 8 characters", pwMismatch:"Passwords don't match", signupPending:"Account created — waiting for admin approval before you can sign in",
@@ -2741,7 +2772,7 @@ new MutationObserver(()=>{ if(LANG!=='en'||enPending) return; enPending=true; se
 function applyLanguage(lang){
   LANG=lang; localStorage.setItem('drh-lang',lang);
   document.documentElement.lang=lang; document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-  document.title=lang==='ar'?'مكتب العيادة — د. هيثم راضي':'Clinic Desk — Dr. Haytham Rady';
+  document.title=lang==='ar'?'د. هيثم راضي — نظام العيادة':'Dr. Haytham Rady — Clinic System';
   document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent=t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder=t(el.dataset.i18nPh); });
   document.querySelectorAll(".lang-btn[data-lang]").forEach(b=>{ b.classList.toggle("active",b.dataset.lang===lang); b.setAttribute("aria-pressed",b.dataset.lang===lang); });
@@ -3870,5 +3901,105 @@ if(getToken()) showApp(); else showLogin();
 })();
 </script>
 
+<script id="drh-sheet">
+/* Bottom sheet on phones: follows the finger 1:1, keeps the release speed, can be grabbed again mid-animation. */
+(function(){
+  var MQ=matchMedia('(max-width:860px)'), RM=matchMedia('(prefers-reduced-motion: reduce)');
+  var modal=document.getElementById('modal'), box=modal&&modal.querySelector('.modal-box'), head=box&&box.querySelector('.modal-head');
+  if(!modal||!box||!head) return;
+  var y=0, v=0, raf=0, closing=false, drag=null;
+  var realClose=window.closeModal, realOpen=window.openModal;
+  function H(){ return box.offsetHeight||1; }
+  function paint(){ box.style.transform=y?'translate3d(0,'+y+'px,0)':''; var p=Math.max(0,Math.min(1,1-y/H())); modal.style.backgroundColor='rgba(0,0,0,'+(0.34*p).toFixed(3)+')'; }
+  var guard=0;
+  function stop(){ if(raf){ cancelAnimationFrame(raf); raf=0; } clearTimeout(guard); }
+  function reset(){ stop(); y=0; v=0; closing=false; box.style.transform=''; modal.style.backgroundColor=''; }
+  // spring from the CURRENT position and speed (response in seconds, damping 1 = no overshoot)
+  function springTo(target,damping,response,done){
+    stop(); var k=Math.pow(2*Math.PI/response,2), c=2*damping*Math.sqrt(k), last=performance.now();
+    // if the browser is not drawing frames (tab in the background), land on the target anyway
+    guard=setTimeout(function(){ if(raf){ cancelAnimationFrame(raf); raf=0; } y=target; v=0; paint(); if(done) done(); },900);
+    (function step(now){
+      var dt=Math.min(0.032,(now-last)/1000); last=now;
+      var a=-k*(y-target)-c*v; v+=a*dt; y+=v*dt;
+      if(Math.abs(y-target)<0.5&&Math.abs(v)<12){ clearTimeout(guard); y=target; v=0; paint(); raf=0; if(done) done(); return; }
+      paint(); raf=requestAnimationFrame(step);
+    })(last);
+  }
+  function project(vel){ var d=0.998; return (vel/1000)*d/(1-d); }
+  function rubber(over,dim){ var c=0.55; return (over*dim*c)/(dim+c*Math.abs(over)); }
+  function finishClose(){ reset(); realClose(); }
+  window.openModal=function(title,html){
+    var wasOpen=modal.classList.contains('open'); realOpen(title,html);
+    if(!MQ.matches||RM.matches||wasOpen){ if(!wasOpen) reset(); return; }
+    closing=false; y=H(); v=0; paint(); springTo(0,1,0.38);
+  };
+  window.closeModal=function(){
+    if(!MQ.matches||RM.matches||!modal.classList.contains('open')){ reset(); realClose(); return; }
+    if(closing) return; closing=true; springTo(H(),1,0.32,finishClose);
+  };
+  head.addEventListener('pointerdown',function(e){
+    if(!MQ.matches||e.target.closest('button')) return;
+    stop(); closing=false; try{ head.setPointerCapture(e.pointerId); }catch(_){}
+    drag={id:e.pointerId,start:e.clientY-y,hist:[{t:e.timeStamp,y:e.clientY}]}; modal.classList.add('sheet-drag');
+  });
+  head.addEventListener('pointermove',function(e){
+    if(!drag||e.pointerId!==drag.id) return;
+    var raw=e.clientY-drag.start; y=raw<0?-rubber(-raw,H()):raw; paint();
+    drag.hist.push({t:e.timeStamp,y:e.clientY}); if(drag.hist.length>6) drag.hist.shift();
+  });
+  function end(e){
+    if(!drag||e.pointerId!==drag.id) return;
+    var h=drag.hist, a=h[0], b=h[h.length-1], dt=(b.t-a.t)/1000; v=dt>0.01?(b.y-a.y)/dt:0;
+    drag=null; modal.classList.remove('sheet-drag');
+    var landing=y+project(v);
+    if(landing>H()*0.5&&v>-200){ closing=true; springTo(H(),1,0.3,finishClose); }
+    else springTo(0,Math.abs(v)>300?0.8:1,0.35);
+  }
+  head.addEventListener('pointerup',end); head.addEventListener('pointercancel',end);
+})();
+</script>
+<script id="drh-swipe">
+/* Phones: swipe a today's-appointment card. Right = confirm attendance, left = open the booking to change it. */
+(function(){
+  var MQ=matchMedia('(max-width:860px)'), list=document.getElementById('homeAppts'); if(!list) return;
+  var g=null, raf=0, swallow=0, COMMIT=88;
+  function rubber(over,dim){ var c=0.55; return (over*dim*c)/(dim+c*Math.abs(over)); }
+  function idOf(el){ return String(el.dataset.view||'').split(/:(.+)/)[1]||''; }
+  function canAttend(id){ var b=(D.bookings||[]).find(function(x){ return String(x.id)===String(id); }); return !!b&&(b.status==='مؤكد'||b.status==='بانتظار الرد')&&typeof can==='function'&&!!P().attendance; }
+  function wrap(el){ var w=document.createElement('div'); w.className='sw-wrap'; var u=document.createElement('div'); u.className='sw-under'; el.parentNode.insertBefore(w,el); w.appendChild(u); w.appendChild(el); return u; }
+  function unwrap(el){ var w=el.parentNode; if(w&&w.classList.contains('sw-wrap')){ w.parentNode.insertBefore(el,w); w.remove(); } el.style.transform=''; }
+  function paint(){ if(!g) return; g.el.style.transform='translate3d('+g.x+'px,0,0)';
+    var right=g.x>0, ok=right?g.attend:true; g.under.className='sw-under '+(right?'attend':'edit')+(ok?'':' off')+(ok&&Math.abs(g.x)>=COMMIT?' armed':'');
+    g.under.textContent=right?(ok?(LANG==='ar'?'تأكيد الحضور':'Confirm attendance'):(LANG==='ar'?'مش متاح':'Not available')):(LANG==='ar'?'تعديل الحجز':'Edit booking');
+    var armed=ok&&Math.abs(g.x)>=COMMIT; if(armed&&!g.armed&&navigator.vibrate) try{ navigator.vibrate(8); }catch(_){ } g.armed=armed; }
+  function settle(el,from,vel,done){ var x=from, v=vel, k=Math.pow(2*Math.PI/0.32,2), c=2*Math.sqrt(k), last=performance.now(); cancelAnimationFrame(raf);
+    var guard=setTimeout(function(){ cancelAnimationFrame(raf); done(); },700);
+    (function step(now){ var dt=Math.min(0.032,(now-last)/1000); last=now; v+=(-k*x-c*v)*dt; x+=v*dt;
+      if(Math.abs(x)<0.5&&Math.abs(v)<12){ clearTimeout(guard); done(); return; }
+      el.style.transform='translate3d('+x+'px,0,0)'; raf=requestAnimationFrame(step); })(last); }
+  list.addEventListener('pointerdown',function(e){
+    if(!MQ.matches||g||(e.pointerType==='mouse'&&e.button!==0)) return; var el=e.target.closest('.td-item'); if(!el) return;
+    g={el:el,id:idOf(el),pid:e.pointerId,sx:e.clientX,sy:e.clientY,x:0,on:false,under:null,armed:false,attend:false,hist:[{t:e.timeStamp,x:e.clientX}]};
+  });
+  list.addEventListener('pointermove',function(e){
+    if(!g||e.pointerId!==g.pid) return; var dx=e.clientX-g.sx, dy=e.clientY-g.sy;
+    if(!g.on){ if(Math.abs(dy)>10&&Math.abs(dy)>Math.abs(dx)){ g=null; return; } if(Math.abs(dx)<10) return;
+      g.on=true; g.attend=canAttend(g.id); g.under=wrap(g.el); try{ g.el.setPointerCapture(g.pid); }catch(_){ } g.sx=e.clientX-(dx>0?10:-10); dx=e.clientX-g.sx; }
+    var lim=140, blocked=dx>0&&!g.attend; g.x=blocked?rubber(dx,60):(Math.abs(dx)>lim?(dx>0?1:-1)*(lim+rubber(Math.abs(dx)-lim,120)):dx); paint();
+    g.hist.push({t:e.timeStamp,x:e.clientX}); if(g.hist.length>6) g.hist.shift(); e.preventDefault();
+  });
+  function end(e){
+    if(!g||e.pointerId!==g.pid) return; var s=g; g=null; if(!s.on) return;
+    var h=s.hist, a=h[0], b=h[h.length-1], dt=(b.t-a.t)/1000, v=dt>0.01?(b.x-a.x)/dt:0;
+    var right=s.x>0, ok=right?s.attend:true, commit=e.type==='pointerup'&&ok&&(Math.abs(s.x)>=COMMIT||(Math.abs(s.x)>40&&Math.abs(v)>600&&(v>0)===right));
+    swallow=Date.now();
+    settle(s.el,s.x,v,function(){ if(s.el.isConnected) unwrap(s.el); if(commit){ if(right) openAttend(s.id,false); else openBooking(s.id); } });
+  }
+  list.addEventListener('pointerup',end); list.addEventListener('pointercancel',end);
+  // a swipe must not also count as a tap on the card
+  list.addEventListener('click',function(e){ if(Date.now()-swallow<450){ e.stopPropagation(); e.preventDefault(); } },true);
+})();
+</script>
 </body>
 </html>
